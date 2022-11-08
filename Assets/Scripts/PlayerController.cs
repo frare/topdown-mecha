@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private InputActionMap moveActions;
 
     private Vector3 moveInput;
 
@@ -14,10 +13,16 @@ public class PlayerController : MonoBehaviour
 
 
 
+    #region UNITY CALLBACKS
     private void Update()
     {
         transform.position += moveInput * moveSpeed * Time.deltaTime;
     }
+    #endregion
+
+
+
+    
 
     #region INPUT SYSTEM ACTION CALLBACKS
     public void Move(InputAction.CallbackContext context)
