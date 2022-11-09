@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed;
 
     private Vector3 moveInput;
+    private Quaternion lookInput;
 
 
 
@@ -16,13 +17,13 @@ public class PlayerController : MonoBehaviour
     #region UNITY CALLBACKS
     private void Update()
     {
-        transform.position += moveInput * moveSpeed * Time.deltaTime;
+        transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
     }
     #endregion
 
 
 
-    
+
 
     #region INPUT SYSTEM ACTION CALLBACKS
     public void Move(InputAction.CallbackContext context)
@@ -34,6 +35,35 @@ public class PlayerController : MonoBehaviour
         if (context.canceled)
         {
             moveInput = Vector3.zero;
+        }
+    }
+
+    public void LookMouse(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(context.ReadValue<Vector2>());
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.gameObject.name == "Ground")
+                {
+                    transform.LookAt(
+                        hit.point
+                    );
+                }
+            }
+        }
+    }
+
+    public void LookController(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            transform.LookAt(
+                transform.localPosition + 
+                new Vector3(context.ReadValue<Vector2>().x, 0f, context.ReadValue<Vector2>().y)
+            );
         }
     }
 
