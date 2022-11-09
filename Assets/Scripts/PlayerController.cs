@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 moveInput;
     private Quaternion lookInput;
-
+    private const int moveRaycastLayerMask = 1 << 6;
 
 
 
@@ -44,14 +44,11 @@ public class PlayerController : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(context.ReadValue<Vector2>());
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, moveRaycastLayerMask))
             {
-                if (hit.collider.gameObject.name == "Ground")
-                {
-                    transform.LookAt(
-                        hit.point
-                    );
-                }
+                transform.LookAt(
+                    hit.point
+                );
             }
         }
     }
