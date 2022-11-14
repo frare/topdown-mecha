@@ -124,7 +124,7 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ColorMode: 4
     - _Compa: 4
-    - _Cull: 0
+    - _Cull: 1
     - _Culling: 0
     - _CustomLightDirectionFollowObjectRotation: 0
     - _CustomLightDirectionIntensity: 0
