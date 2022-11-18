@@ -5,11 +5,15 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Attributes")]
     [SerializeField] private float moveSpeed;
+
+    [Header("References")]
+    [SerializeField] private ObjectPool bulletPool;
 
     private Vector3 moveInput;
     private Quaternion lookInput;
-    private const int moveRaycastLayerMask = 1 << 6;
+    private const int rotateRaycastLayerMask = 1 << 6;
 
 
 
@@ -44,7 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(context.ReadValue<Vector2>());
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, moveRaycastLayerMask))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, rotateRaycastLayerMask))
             {
                 transform.LookAt(
                     hit.point
