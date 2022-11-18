@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: de0b8f1dc75a36a41b93b84c62896c80
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Abominable
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8e2e738877cb6d2439cbe19882778d4f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
