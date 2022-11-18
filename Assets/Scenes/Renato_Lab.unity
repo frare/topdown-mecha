@@ -1845,7 +1845,7 @@ GameObject:
   - component: {fileID: 699956792}
   - component: {fileID: 699956791}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: 'Text - Game made by: '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1866,9 +1866,9 @@ RectTransform:
   m_Father: {fileID: 700586948}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -627, y: -395.7}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -1427, y: 54.299988}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699956791
@@ -2759,9 +2759,9 @@ RectTransform:
   m_Father: {fileID: 1763270710}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122, y: 856}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 122, y: -44}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918595802
@@ -3377,7 +3377,7 @@ GameObject:
   - component: {fileID: 1119405468}
   - component: {fileID: 1119405467}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: L. Frare and Renato F.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3423,7 +3423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lucar Frare and Renato Ferreira G.
+  m_text: L. Frare and Renato F.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7dd457f6e55efe24ba36898672030f1b, type: 2}
   m_sharedMaterial: {fileID: -8322624843077555890, guid: 7dd457f6e55efe24ba36898672030f1b,
@@ -9869,10 +9869,10 @@ RectTransform:
   m_Father: {fileID: 1268450126}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -576, y: 331}
-  m_SizeDelta: {x: 418.8695, y: 127.7975}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1376, y: -106}
+  m_SizeDelta: {x: 418.8695, y: 127.797485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664227973
 MonoBehaviour:
