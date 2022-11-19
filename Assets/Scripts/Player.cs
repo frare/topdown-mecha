@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    public static PlayerController instance;
+    public static Player instance;
 
     [Header("Attributes")]
+    [SerializeField] private int health;
+    private int currentHealth;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float rangedCooldown;
+    private float currentRangedCooldown;
 
     [Header("References")]
+    [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private ObjectPool bulletPool;
 
     private Vector3 moveInput;
     private Quaternion lookInput;
     private const int rotateRaycastLayerMask = 1 << 6;
-    private float rangedCooldown = 0f;
+    
+
 
 
 
@@ -25,12 +31,16 @@ public class PlayerController : MonoBehaviour
     #region UNITY CALLBACKS
     private void Awake()
     {
-        PlayerController.instance = this;
+        Player.instance = this;
+
+        currentHealth = health;
     }
 
     private void Update()
     {
         transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
+
+        currentRangedCooldown += Time.deltaTime;
     }
     #endregion
 
@@ -101,9 +111,21 @@ public class PlayerController : MonoBehaviour
 
     private void RangedAttack()
     {
-        GameObject bullet = bulletPool.GetNext();
-        bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-        bullet.SetActive(true);
+        if (currentRangedCooldown >= rangedCooldown)
+        {
+            GameObject bullet = bulletPool.GetNext();
+            bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            bullet.SetActive(true);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        // if (currentHealth <= 0)
+        // game over
+        // else give feedback
     }
     #endregion
 }

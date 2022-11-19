@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [Header("Attributes")]
+    [SerializeField] private int damage;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float disableTime;
     private float currentDisableTime;
@@ -27,5 +28,10 @@ public class Projectile : MonoBehaviour
 
         if (currentDisableTime >= disableTime) gameObject.SetActive(false);
         else currentDisableTime += Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        collider.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(damage);
     }
 }
