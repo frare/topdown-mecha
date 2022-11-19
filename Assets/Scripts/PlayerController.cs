@@ -5,20 +5,29 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     [Header("Attributes")]
     [SerializeField] private float moveSpeed;
 
     [Header("References")]
+    [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private ObjectPool bulletPool;
 
     private Vector3 moveInput;
     private Quaternion lookInput;
     private const int rotateRaycastLayerMask = 1 << 6;
+    private float rangedCooldown = 0f;
 
 
 
 
     #region UNITY CALLBACKS
+    private void Awake()
+    {
+        PlayerController.instance = this;
+    }
+
     private void Update()
     {
         transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
@@ -72,8 +81,29 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Attack!");
+            // if melee
+
+            // else if shooting
+            RangedAttack();
         }
+    }
+    #endregion
+
+
+
+
+
+    #region CLASS METHODS
+    private void MeleeAtack()
+    {
+
+    }
+
+    private void RangedAttack()
+    {
+        GameObject bullet = bulletPool.GetNext();
+        bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.SetActive(true);
     }
     #endregion
 }

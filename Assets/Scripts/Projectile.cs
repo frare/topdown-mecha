@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Attributes")]
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float disableTime;
+    private float currentDisableTime;
+
+    [Header("References")]
+    [SerializeField] private Rigidbody rb;
+
+
+
+
+
+    private void OnEnable()
     {
-        
+        currentDisableTime = 0f;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
+
+        if (currentDisableTime >= disableTime) gameObject.SetActive(false);
+        else currentDisableTime += Time.deltaTime;
     }
 }

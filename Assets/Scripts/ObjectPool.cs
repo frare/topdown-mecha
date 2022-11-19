@@ -38,6 +38,7 @@ public class ObjectPool : MonoBehaviour
         if (dynamicSize)
         {
             GameObject newObj = poolAsChild ? Instantiate(prefab, transform) : Instantiate(prefab);
+            newObj.SetActive(false);
             
             pooledObjects.Add(newObj);
             return newObj;
