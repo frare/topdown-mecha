@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static int layerMask = 1 << 8;
+
     [Header("Attributes")]
     [SerializeField] private int health;
     private int currentHealth;

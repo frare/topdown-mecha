@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rangedCooldown;
     private float currentRangedCooldown;
+    [SerializeField] private float meleeCooldown;
+    private float currentMeleeCooldown;
+    [SerializeField] private float meleeRange;
+    [SerializeField] private float meleeSize;
 
     [Header("References")]
     [SerializeField] private Rigidbody rb;
@@ -34,6 +38,8 @@ public class Player : MonoBehaviour
         Player.instance = this;
 
         currentHealth = health;
+        currentRangedCooldown = rangedCooldown;
+        currentMeleeCooldown = meleeCooldown;
     }
 
     private void Update()
@@ -41,6 +47,7 @@ public class Player : MonoBehaviour
         transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
 
         currentRangedCooldown += Time.deltaTime;
+        currentMeleeCooldown += Time.deltaTime;
     }
     #endregion
 
@@ -90,11 +97,16 @@ public class Player : MonoBehaviour
     public void Attack(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {
-            // if melee
-
-            // else if shooting
-            RangedAttack();
+        {   
+            Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward * meleeRange, meleeRange, Enemy.layerMask);
+            if (hits.Length > 0)
+            {
+                MeleeAtack(hits);
+            }
+            else
+            {
+                RangedAttack();
+            }
         }
     }
     #endregion
@@ -104,18 +116,30 @@ public class Player : MonoBehaviour
 
 
     #region CLASS METHODS
-    private void MeleeAtack()
+    private void MeleeAtack(Collider[] hits)
     {
+        if (currentMeleeCooldown >= meleeCooldown)
+        {
+            // play melee attack animation
+            foreach (Collider hit in hits)
+            {
+                hit.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(1);
+            }
 
+            currentMeleeCooldown = 0f;
+        }
     }
 
     private void RangedAttack()
     {
         if (currentRangedCooldown >= rangedCooldown)
         {
+            // play ranged attack animation
             GameObject bullet = bulletPool.GetNext();
             bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.SetActive(true);
+
+            currentRangedCooldown = 0f;
         }
     }
 
