@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{2091ab3a-7d9f-45f2-9c23-87389c469c3b}">
 		<property name="name">
-			<value>Spinner_attack</value>
+			<value>Spinner_Attack</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -33,6 +33,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{1f6644bb-40ae-43d2-942a-307eb34e3c68}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{3624d596-f7f7-4523-9ad4-2ab6c4ff7a1c}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{fecb7ca0-a807-451f-8a69-5833d14ed4b8}">

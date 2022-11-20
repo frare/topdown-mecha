@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{d87166fe-b84f-470f-9f60-7b3f2ec9ecd6}">
 		<property name="name">
-			<value>New Event</value>
+			<value>Pickup_PowerUp</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -33,6 +33,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{a4cc0241-1d00-4bf3-a901-a6570eca1696}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{3624d596-f7f7-4523-9ad4-2ab6c4ff7a1c}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{eca05c3f-b3bb-4293-887f-e4edc646ee0d}">
@@ -66,11 +69,7 @@
 			<destination>{f7fb55ff-7d97-4cfc-b8c3-66139948a81f}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{375981c1-e313-4e29-b713-0cf7d18d2239}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
-	</object>
+	<object class="Timeline" id="{375981c1-e313-4e29-b713-0cf7d18d2239}" />
 	<object class="ActionSheet" id="{a4cc0241-1d00-4bf3-a901-a6570eca1696}">
 		<relationship name="modules">
 			<destination>{97396908-fe5d-4772-9205-e88eaeac1d22}</destination>
