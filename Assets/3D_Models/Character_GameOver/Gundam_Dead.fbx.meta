@@ -2,7 +2,55 @@ fileFormatVersion: 2
 guid: bcb88190eb5ff5245ba8d1f710fc3d2d
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 8552056118436287408
+    second: Mech_Skeleton.001|0_Iddle
+  - first:
+      74: 6251132074267449980
+    second: Mech_Skeleton.001|0_Iddle.001
+  - first:
+      74: -3478108561792064580
+    second: Mech_Skeleton.001|Aim_Setup
+  - first:
+      74: -7970098790985190698
+    second: Mech_Skeleton.001|Attack_Melee
+  - first:
+      74: 5059238024349841044
+    second: Mech_Skeleton.001|eMPTY
+  - first:
+      74: -5218705752004944900
+    second: Mech_Skeleton.001|Float_N
+  - first:
+      74: -6220105291311201620
+    second: Mech_Skeleton.001|Float_N.001
+  - first:
+      74: -3446851540343933874
+    second: Mech_Skeleton.001|Float_S
+  - first:
+      74: 3800287517229163062
+    second: Mech_Skeleton.001|Float_E
+  - first:
+      74: 6943612393380117022
+    second: Mech_Skeleton.001|Float_W
+  - first:
+      74: -11412971781734380
+    second: Mech_Skeleton.001|Game_Over
+  - first:
+      74: 7551157881263424273
+    second: Mech_Skeleton.001|Run_Front
+  - first:
+      74: 3427702715906462983
+    second: Mech_Skeleton.001|Walk_E
+  - first:
+      74: 2414262542797656241
+    second: Mech_Skeleton.001|Walk_N
+  - first:
+      74: -6589821969823585174
+    second: Mech_Skeleton.001|Walk_S
+  - first:
+      74: -3226753427728585055
+    second: Mech_Skeleton.001|Walk_W
   externalObjects:
   - first:
       type: UnityEngine:Material

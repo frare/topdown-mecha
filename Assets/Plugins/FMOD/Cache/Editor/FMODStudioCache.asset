@@ -1,5 +1,143 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8316911970379071220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu/Button_Click
+  m_EditorClassIdentifier: 
+  Path: event:/Menu/Button_Click
+  guid: e719881e89868943a86523b789cd967d
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
+--- !u!114 &-8156555771992779266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Power_Ups/Pickup_PowerUp
+  m_EditorClassIdentifier: 
+  Path: event:/Power_Ups/Pickup_PowerUp
+  guid: fe6671d84fb80f479f607b3f2ec9ecd6
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7299365838218710697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM_Menu
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM_Menu
+  guid: 67459b2ab4c7934aad23aae3d7ed671d
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 89155
+--- !u!114 &-6873251938103169367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Spinner_Iddle
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Spinner_Iddle
+  guid: 711f653dc8e22847b02b0b05164e5ce8
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6137
+--- !u!114 &-5684700186012489552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM_Gameplay
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM_Gameplay
+  guid: 981935e048142748958069fada2f7e2d
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 568905
+--- !u!114 &-5660482463324753263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Hit_Shield
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Hit_Shield
+  guid: 1e4992087f41794bbc4eedf9038c3b0e
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
 --- !u!114 &-4563098593466678501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,10 +152,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD_PRoj/Top_Down_Mecha/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 638045529823334057
+  lastModified: 638045609415506300
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1670409500822767992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Spinner_Attack
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Spinner_Attack
+  guid: 3aab91209f7df2459c2387389c469c3b
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6137
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,14 +194,119 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 6247766254621221901}
   - {fileID: -4563098593466678501}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 7825731088451921474}
+  - {fileID: 5641239464918345724}
+  - {fileID: -5660482463324753263}
+  - {fileID: -1670409500822767992}
+  - {fileID: 7212159516901692884}
+  - {fileID: -7299365838218710697}
+  - {fileID: -6873251938103169367}
+  - {fileID: 2441589028292269658}
+  - {fileID: -5684700186012489552}
+  - {fileID: 903910233218171500}
+  - {fileID: 4802420831587908712}
+  - {fileID: -8316911970379071220}
+  - {fileID: -8156555771992779266}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4563098593466678501}
   StringsBanks:
   - {fileID: 6247766254621221901}
-  stringsBankWriteTime: 638045529823353996
+  stringsBankWriteTime: 638045609415546236
   cacheVersion: 5
+--- !u!114 &903910233218171500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/Ambience
+  guid: bbd54acaaaf1bf4bbdd43a0f895f2df6
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 37249
+--- !u!114 &2441589028292269658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Tank_Iddle
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Tank_Iddle
+  guid: 8c333acb2750394d9b9ecc7ba79f341b
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7700
+--- !u!114 &4802420831587908712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu/Button_Hover
+  m_EditorClassIdentifier: 
+  Path: event:/Menu/Button_Hover
+  guid: decdfbbc64bda24f8cf7734f1f3fedf3
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
+--- !u!114 &5641239464918345724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy_Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Hit
+  guid: 12de5c696ba59f43b268b973cf00e78a
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 567
 --- !u!114 &6247766254621221901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,9 +321,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD_PRoj/Top_Down_Mecha/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 638045529823353996
+  lastModified: 638045609415546236
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 700
+    Value: 1362
   Exists: 1
+--- !u!114 &7212159516901692884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Shot_Default
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Shot_Default
+  guid: 63e92551d875c44a8cfde9e4460c5ca3
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &7825731088451921474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VFX/New Event
+  m_EditorClassIdentifier: 
+  Path: event:/VFX/New Event
+  guid: 0d95989cc6c20944b486ef43fc542956
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
