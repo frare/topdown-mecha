@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD_PRoj/Top_Down_Mecha/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 638037752387344146
+  lastModified: 638045529823334057
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
   - {fileID: -4563098593466678501}
   StringsBanks:
   - {fileID: 6247766254621221901}
-  stringsBankWriteTime: 638037752387364159
+  stringsBankWriteTime: 638045529823353996
   cacheVersion: 5
 --- !u!114 &6247766254621221901
 MonoBehaviour:
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD_PRoj/Top_Down_Mecha/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 638037752387364159
+  lastModified: 638045529823353996
   LoadResult: 0
   FileSizes:
   - Name: Desktop

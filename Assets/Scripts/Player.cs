@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private float currentRangedCooldown;
 
     [Header("References")]
+    [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private ObjectPool bulletPool;
@@ -87,6 +88,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void MelleeAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            MeleeAtack();
+        }
+    }
+
     public void Attack(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -106,7 +115,7 @@ public class Player : MonoBehaviour
     #region CLASS METHODS
     private void MeleeAtack()
     {
-
+        animator.SetTrigger("onAttack");
     }
 
     private void RangedAttack()
