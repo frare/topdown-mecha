@@ -19,9 +19,9 @@ public class Player_AnimatorControl : MonoBehaviour
 
     private IEnumerator Start()
     {
-        enabled = false;
-        yield return null;
-        enabled = true;
+        moveDirection.enabled = false;
+        yield return new WaitForEndOfFrame();
+        moveDirection.enabled = true;
     }
 
     private void Update()
@@ -32,7 +32,7 @@ public class Player_AnimatorControl : MonoBehaviour
         currentVelX = Mathf.Lerp(currentVelX, Mathf.Clamp(crossRig * XMult, -1, 1), Time.deltaTime * velXLerp);
         currentVelY = Mathf.Lerp(currentVelY, Mathf.Clamp(crossFwd * YMult, -1, 1), Time.deltaTime * velYLerp);
 
+        animator.SetFloat("VelX", currentVelX);
         animator.SetFloat("VelY", currentVelY);
-        animator.SetFloat("VelX", currentVelY);
     }
 }

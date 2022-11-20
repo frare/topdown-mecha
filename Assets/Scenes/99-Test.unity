@@ -339,6 +339,7 @@ MonoBehaviour:
   health: 3
   moveSpeed: 5
   rangedCooldown: 0
+  animator: {fileID: 0}
   rb: {fileID: 0}
   bulletSpawnPoint: {fileID: 1307056706}
   bulletPool: {fileID: 140214971}
@@ -945,7 +946,6 @@ GameObject:
   - component: {fileID: 973654401}
   - component: {fileID: 973654400}
   - component: {fileID: 973654402}
-  - component: {fileID: 973654403}
   - component: {fileID: 973654405}
   m_Layer: 7
   m_Name: Player
@@ -969,6 +969,7 @@ MonoBehaviour:
   health: 3
   moveSpeed: 10
   rangedCooldown: 0
+  animator: {fileID: 1511642851}
   rb: {fileID: 0}
   bulletSpawnPoint: {fileID: 1659062494}
   bulletPool: {fileID: 140214971}
@@ -1120,23 +1121,27 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 19355c0a-8de8-4851-9800-03278393a274
     m_ActionName: Player/LookController
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 973654400}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: MelleeAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c5604558-4d02-48c7-810d-fb4eb248d7f7
+    m_ActionName: Player/MelleeAttack[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &973654403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973654399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7213b43e6e3318c468c1c833deb9ba6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &973654405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,10 +1156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDirection: {fileID: 1845896340}
   animator: {fileID: 1511642851}
-  XMult: 0.25
-  YMult: 0.25
-  velXLerp: 5
-  velYLerp: 5
+  XMult: 0.5
+  YMult: 0.5
+  velXLerp: 7
+  velYLerp: 7
 --- !u!1 &1125272901
 GameObject:
   m_ObjectHideFlags: 0
