@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{419ee2d7-8375-40ec-a3cf-7d6db7dc7c5c}">
+		<property name="assetPath">
+			<value>electrode-115161.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>81.29306122448979</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b9ad1a58-942a-432c-81aa-874bbee8c929}</destination>
+		</relationship>
+	</object>
+</objects>
