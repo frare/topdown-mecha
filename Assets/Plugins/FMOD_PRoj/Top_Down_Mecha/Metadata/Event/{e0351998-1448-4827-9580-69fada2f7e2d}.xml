@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{e0351998-1448-4827-9580-69fada2f7e2d}">
 		<property name="name">
 			<value>BGM_Gameplay</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{27a1155c-81d2-4836-b4af-41c9ab5bc696}</destination>
@@ -312,7 +312,6 @@
 	<object class="MixerBusEffectChain" id="{6218e748-6b61-4569-9404-b0753a531536}">
 		<relationship name="effects">
 			<destination>{e79e0baf-0d0c-4259-b13a-5260d162d0e1}</destination>
-			<destination>{3267e4d0-31ae-4343-b962-fa9a7753c85c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fc9409fb-28ca-4511-88b2-3a97b98fe921}" />
@@ -412,7 +411,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{67f11cf3-6acc-4cc5-89a9-36631280eeee}" />
 	<object class="MixerBusFader" id="{e79e0baf-0d0c-4259-b13a-5260d162d0e1}" />
-	<object class="SpatialiserEffect" id="{3267e4d0-31ae-4343-b962-fa9a7753c85c}" />
 	<object class="AutomationPoint" id="{e001f59d-1f77-4830-9a88-64e2a82dc9bc}">
 		<property name="position">
 			<value>77.400000000000006</value>

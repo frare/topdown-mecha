@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{2a9b4567-c7b4-4a93-ad23-aae3d7ed671d}">
 		<property name="name">
 			<value>BGM_Menu</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{27a1155c-81d2-4836-b4af-41c9ab5bc696}</destination>
@@ -112,9 +112,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{79fd4392-c620-48a7-9f40-1f87b0a215a4}">
-		<property name="volume">
-			<value>-28</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -131,7 +128,6 @@
 	<object class="MixerBusEffectChain" id="{62e0330b-ff5c-4046-957d-003a4914205c}">
 		<relationship name="effects">
 			<destination>{82e919e1-e0e4-46a6-b877-a24cf2fb2892}</destination>
-			<destination>{b884a150-bfb7-4317-a27d-412371d4419f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4e7dfca5-266d-411f-9eee-f78fbc2e6b9e}" />
@@ -151,7 +147,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{b4e04e0b-08ad-4cf7-8e73-c691f4080fbc}" />
 	<object class="MixerBusFader" id="{82e919e1-e0e4-46a6-b877-a24cf2fb2892}" />
-	<object class="SpatialiserEffect" id="{b884a150-bfb7-4317-a27d-412371d4419f}" />
 	<object class="AutomationPoint" id="{37c97e08-f42a-449a-aae6-e10addb894f7}">
 		<property name="position">
 			<value>0</value>
