@@ -33,5 +33,6 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         collider.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(damage);
+        gameObject.SetActive(false);
     }
 }
