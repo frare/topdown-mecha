@@ -1,0 +1,820 @@
+fileFormatVersion: 2
+guid: 730de96ffef2cbb4a89abef84ce21456
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -8225288024692574062
+    second: Mech_Skeleton|0_Iddle
+  - first:
+      74: -4081586199812091946
+    second: Mech_Skeleton|Aim_Setup
+  - first:
+      74: -4475456095391589186
+    second: Mech_Skeleton|Attack_Melee
+  - first:
+      74: 6724123660782129525
+    second: Mech_Skeleton|eMPTY
+  - first:
+      74: -8625335515410919434
+    second: Mech_Skeleton|Float_N
+  - first:
+      74: 9135037091250366727
+    second: Mech_Skeleton|Float_S
+  - first:
+      74: 4169621089643106548
+    second: Mech_Skeleton|Float_E
+  - first:
+      74: -3473635469325553862
+    second: Mech_Skeleton|Float_W
+  - first:
+      74: -2907108689774369995
+    second: Mech_Skeleton|Run_Front
+  - first:
+      74: -4912574926124282892
+    second: Mech_Skeleton|Walk_E
+  - first:
+      74: 5825981382403062179
+    second: Mech_Skeleton|Walk_N
+  - first:
+      74: -346462738922965299
+    second: Mech_Skeleton|Walk_S
+  - first:
+      74: -7221862166917466293
+    second: Mech_Skeleton|Walk_W
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: c588cdb0fd65da04c86398db2f6f0722, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Decalque
+    second: {fileID: 2100000, guid: 43681e480995ed5468796ef1b1b4ad38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Emissive
+    second: {fileID: 2100000, guid: c19144cfc79889246b82a2bc99110f34, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Mech_Skeleton|0_Iddle
+      takeName: Mech_Skeleton|0_Iddle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Aim_Setup
+      takeName: Mech_Skeleton|Aim_Setup
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Attack_Melee
+      takeName: Mech_Skeleton|Attack_Melee
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|eMPTY
+      takeName: Mech_Skeleton|eMPTY
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Float_N
+      takeName: Mech_Skeleton|Float_N
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Float_S
+      takeName: Mech_Skeleton|Float_S
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Float_E
+      takeName: Mech_Skeleton|Float_E
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Float_W
+      takeName: Mech_Skeleton|Float_W
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Run_Front
+      takeName: Mech_Skeleton|Run_Front
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Walk_E
+      takeName: Mech_Skeleton|Walk_E
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Walk_N
+      takeName: Mech_Skeleton|Walk_N
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Walk_S
+      takeName: Mech_Skeleton|Walk_S
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mech_Skeleton|Walk_W
+      takeName: Mech_Skeleton|Walk_W
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: gundam_Base_color_Variation(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_Skeleton
+      parentName: gundam_Base_color_Variation(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: DEF_Root_Hor
+      parentName: Mech_Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.023532117, y: -1.07880935e-16, z: 1.1007727e-16, w: 0.9997231}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Root_Vert
+      parentName: DEF_Root_Hor
+      position: {x: -1.1749703e-11, y: 0.0000051547063, z: 0.000109428904}
+      rotation: {x: 0.69975585, y: -0.000000085161034, z: -0.000000083417454, w: 0.7143821}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: DEF_Hip
+      parentName: DEF_Root_Vert
+      position: {x: 0.000024804764, y: 0.017369218, z: 0.000053401927}
+      rotation: {x: 0.03876943, y: 0.000000043678615, z: -0.000000007548739, w: 0.9992482}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: DEF_Chest
+      parentName: DEF_Hip
+      position: {x: -1.3083578e-12, y: 0.008088313, z: 0.0000000023804403}
+      rotation: {x: 0.020515125, y: -0.000000043702318, z: -0.0000000039944066, w: 0.99978954}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: DEF_Neck
+      parentName: DEF_Chest
+      position: {x: -1.3971401e-12, y: 0.01039084, z: 1.4309769e-10}
+      rotation: {x: 0.17543651, y: -9.173106e-12, z: -0.0000000418539, w: 0.9844908}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Head
+      parentName: DEF_Neck
+      position: {x: -1.8665957e-13, y: 0.0021509153, z: -6.0196037e-10}
+      rotation: {x: -0.07228116, y: -4.0087623e-14, z: 0.00000001723318, w: 0.9973843}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Ear.L
+      parentName: DEF_Neck
+      position: {x: -0.004663498, y: 0.0053608245, z: -0.0011315865}
+      rotation: {x: -0.3210886, y: 0.000000026644672, z: 0.000000115894586, w: 0.9470492}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: DEF_Antena.L
+      parentName: DEF_Neck
+      position: {x: -0.0016903761, y: 0.010051286, z: 0.0025669422}
+      rotation: {x: -0.55856705, y: 0.0031504177, z: 0.0052695274, w: 0.82943666}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: DEF_Ear.R
+      parentName: DEF_Neck
+      position: {x: 0.0046634967, y: 0.0053608255, z: -0.0011315875}
+      rotation: {x: -0.3210886, y: 0.00000017691531, z: -0.00000005292279, w: 0.94704914}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: DEF_Antena.R
+      parentName: DEF_Neck
+      position: {x: 0.0016903772, y: 0.010051287, z: 0.0025669422}
+      rotation: {x: -0.55856705, y: -0.0031502258, z: -0.0052693994, w: 0.82943666}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: DEF_Clavicule.L
+      parentName: DEF_Chest
+      position: {x: -0.0027980984, y: 0.009073014, z: -0.00009609141}
+      rotation: {x: 0.21274555, y: -0.065786235, z: 0.8065896, w: 0.5475626}
+      scale: {x: 0.99999976, y: 0.9999999, z: 1}
+    - name: DEF_UpArm.L
+      parentName: DEF_Clavicule.L
+      position: {x: 0.003128453, y: 0.005959769, z: -0.0021935168}
+      rotation: {x: 0.18429954, y: 0.93251795, z: -0.08573998, w: -0.29848397}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1.0000004}
+    - name: DEF_ForeArm.L
+      parentName: DEF_UpArm.L
+      position: {x: -0.0000000012479722, y: 0.008099934, z: 5.2154064e-10}
+      rotation: {x: -0.01751263, y: 0.0076760035, z: 0.0040109893, w: 0.99980915}
+      scale: {x: 1.0000001, y: 0.9999998, z: 0.9999997}
+    - name: DEF_Hand.L
+      parentName: DEF_ForeArm.L
+      position: {x: 0.0000000010430813, y: 0.008118263, z: -4.4703483e-10}
+      rotation: {x: 0.0029613834, y: 0.55802894, z: 0.063839495, w: 0.82735693}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: DEF_Fingers_01.L
+      parentName: DEF_Hand.L
+      position: {x: -0.0000000010430813, y: 0.0027331524, z: 7.4505804e-11}
+      rotation: {x: 0.069200404, y: 0.0043916986, z: 0.0040670894, w: 0.9975848}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Fingers_02.L
+      parentName: DEF_Fingers_01.L
+      position: {x: 4.4703483e-10, y: 0.0011816978, z: -2.6077032e-10}
+      rotation: {x: 0.030219868, y: -0.028678901, z: 0.0010403302, w: 0.9991312}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Fingers_03.L
+      parentName: DEF_Fingers_02.L
+      position: {x: 5.9604643e-10, y: 0.0016101866, z: 5.9604643e-10}
+      rotation: {x: 0.3079814, y: 0.025635712, z: 0.010064862, w: 0.95099366}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Thumb.L
+      parentName: DEF_Hand.L
+      position: {x: 0.0018542274, y: 0.0018434807, z: 0.00080012745}
+      rotation: {x: 0.055745784, y: 0.18863927, z: -0.39408636, w: 0.897777}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: DEF_Thumb02.L
+      parentName: DEF_Thumb.L
+      position: {x: -0.0000000019371509, y: 0.0016768652, z: 0}
+      rotation: {x: 0.0072833197, y: 0.031212606, z: 0.4880244, w: 0.8722413}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: DEF_Hand_Item.L
+      parentName: DEF_Hand.L
+      position: {x: -0.0031075096, y: 0.0037942533, z: 0.001288176}
+      rotation: {x: -0.054980014, y: 0.7737772, z: 0.040587485, w: 0.6297608}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Riffle
+      parentName: DEF_Hand_Item.L
+      position: {x: -0.00024974704, y: 0.0016878527, z: 0.00048649698}
+      rotation: {x: -0.7262173, y: -0.027332818, z: -0.07573071, w: 0.6827343}
+      scale: {x: -0.00084013795, y: -0.0049736295, z: -0.0049736314}
+    - name: DEF_Shoulder_Thruster.L
+      parentName: DEF_Clavicule.L
+      position: {x: 0.0041643227, y: 0.005092002, z: -0.0036751346}
+      rotation: {x: -0.563753, y: 0.8074156, z: 0.0047729807, w: -0.17389627}
+      scale: {x: 0.99999976, y: 1, z: 1.0000005}
+    - name: DEF_ForeArm_Thruster.L
+      parentName: DEF_Clavicule.L
+      position: {x: -0.0043726997, y: 0.011708278, z: -0.0004892884}
+      rotation: {x: -0.57251453, y: 0.6865093, z: -0.42265224, w: 0.1493225}
+      scale: {x: 0.9999998, y: 1.0000005, z: 0.99999976}
+    - name: DEF_ShIn_Thruster.L
+      parentName: DEF_Clavicule.L
+      position: {x: -0.020033395, y: 0.015112794, z: 0.0064237867}
+      rotation: {x: -0.5630625, y: 0.8152723, z: -0.05195798, w: -0.124868676}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999997}
+    - name: DEF_Backpack
+      parentName: DEF_Chest
+      position: {x: -0.0000000012566619, y: 0.010179432, z: -0.0052649574}
+      rotation: {x: 0.99729335, y: -0.000000008764902, z: -0.00000011888746, w: -0.07352512}
+      scale: {x: 1, y: 1, z: 1.0000157}
+    - name: DEF_Backpack_Mid_Thruster
+      parentName: DEF_Chest
+      position: {x: -0.0000000013573219, y: 0.0033044778, z: -0.005687155}
+      rotation: {x: 0.99658906, y: 0.00000003404624, z: -0.00000047292303, w: 0.08252436}
+      scale: {x: 1, y: 0.9999996, z: 1.0000193}
+    - name: DEF_Backpack_Thruster.L
+      parentName: DEF_Chest
+      position: {x: -0.0036901054, y: 0.0034367042, z: -0.0055453163}
+      rotation: {x: 0.99001825, y: -0.11114304, z: -0.040454376, w: 0.076645665}
+      scale: {x: 1.0000045, y: 1.0000002, z: 1.0000011}
+    - name: DEF_Clavicule.R
+      parentName: DEF_Chest
+      position: {x: 0.0027980984, y: 0.009073014, z: -0.00009609304}
+      rotation: {x: 0.21274544, y: 0.06578635, z: -0.80658966, w: 0.5475625}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: DEF_UpArm.R
+      parentName: DEF_Clavicule.R
+      position: {x: -0.0031284543, y: 0.0059597706, z: -0.002193514}
+      rotation: {x: -0.17496596, y: 0.95781803, z: -0.10729581, w: 0.20114462}
+      scale: {x: 1.0000002, y: 0.9999997, z: 1.0000001}
+    - name: DEF_ForeArm.R
+      parentName: DEF_UpArm.R
+      position: {x: -0.0000000015646219, y: 0.0077299806, z: -0.0000000011920929}
+      rotation: {x: -0.024931569, y: -0.0060099354, z: -0.001614183, w: 0.9996698}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999997}
+    - name: DEF_Hand.R
+      parentName: DEF_ForeArm.R
+      position: {x: -6.3329936e-10, y: 0.008118274, z: 3.72529e-10}
+      rotation: {x: 0.002961555, y: -0.55802894, z: -0.06383942, w: 0.82735693}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: DEF_Fingers_01.R
+      parentName: DEF_Hand.R
+      position: {x: -1.8626451e-11, y: 0.0030890484, z: 0.0000000014423858}
+      rotation: {x: 0.069200605, y: -0.004391838, z: -0.0040672785, w: 0.9975848}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF_Fingers_02.R
+      parentName: DEF_Fingers_01.R
+      position: {x: 3.0733643e-10, y: 0.0011817022, z: 0.0000000014354009}
+      rotation: {x: 0.030221354, y: 0.028678223, z: -0.0010441877, w: 0.9991312}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: DEF_Fingers_03.R
+      parentName: DEF_Fingers_02.R
+      position: {x: -0, y: 0.0016101915, z: 3.655441e-10}
+      rotation: {x: 0.3079807, y: -0.02563568, z: -0.010064904, w: 0.95099396}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: DEF_Thumb.R
+      parentName: DEF_Hand.R
+      position: {x: -0.0018263124, y: 0.0021960894, z: 0.0008782799}
+      rotation: {x: -0.11315839, y: 0.007864297, z: 0.3566299, w: 0.9273341}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+    - name: DEF_Thumb02.R
+      parentName: DEF_Thumb.R
+      position: {x: 7.45058e-10, y: 0.0016768674, z: -7.45058e-10}
+      rotation: {x: 0.0072833337, y: -0.03121179, z: -0.48802406, w: 0.87224156}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: DEF_Hand_Item.R
+      parentName: DEF_Hand.R
+      position: {x: 0.0031648364, y: 0.004341573, z: 0.00082375616}
+      rotation: {x: -0.08691093, y: 0.7888011, z: -0.02471496, w: -0.60797083}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: DEF_Blade
+      parentName: DEF_Hand_Item.R
+      position: {x: -0.0000000011688098, y: 0.0076363096, z: -1.862645e-10}
+      rotation: {x: -0.000000026452142, y: 0.00000063801303, z: 0.00000002400536,
+        w: 1}
+      scale: {x: 0.11957267, y: 0.08753735, z: 0.068093054}
+    - name: TGT_Blade
+      parentName: DEF_Hand_Item.R
+      position: {x: -0.0000000011688098, y: 0.0076363096, z: -1.862645e-10}
+      rotation: {x: -0.000000026452142, y: 0.00000063801303, z: 0.00000002400536,
+        w: 1}
+      scale: {x: 0.11957267, y: 0.08753735, z: 0.068093054}
+    - name: DEF_Shield
+      parentName: DEF_ForeArm.R
+      position: {x: 0.005931338, y: 0.004147158, z: -0.0003249225}
+      rotation: {x: 0.9709334, y: 0.10694425, z: -0.19531012, w: -0.0877796}
+      scale: {x: 1.0000019, y: 1.0000004, z: 1.0000027}
+    - name: TGT_Shield
+      parentName: DEF_ForeArm.R
+      position: {x: 0.005931338, y: 0.004147158, z: -0.0003249225}
+      rotation: {x: 0.9709334, y: 0.10694425, z: -0.19531012, w: -0.0877796}
+      scale: {x: 1.0000019, y: 1.0000004, z: 1.0000027}
+    - name: DEF_Shoulder_Thruster.R
+      parentName: DEF_Clavicule.R
+      position: {x: -0.004528579, y: 0.0049000178, z: -0.003161931}
+      rotation: {x: 0.56375265, y: 0.8074156, z: 0.0047727334, w: 0.17389701}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+    - name: DEF_ForeArm_Thruster.R
+      parentName: DEF_Clavicule.R
+      position: {x: 0.005132086, y: 0.01116832, z: -0.004142425}
+      rotation: {x: 0.57251406, y: 0.68650955, z: -0.4226526, w: -0.14932199}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1}
+    - name: DEF_ShIn_Thruster.R
+      parentName: DEF_Clavicule.R
+      position: {x: 0.018051594, y: 0.015379787, z: 0.009124213}
+      rotation: {x: 0.5630621, y: 0.8152724, z: -0.051958714, w: 0.12486928}
+      scale: {x: 1.000003, y: 1.0000001, z: 1.0000002}
+    - name: DEF_Backpack_Thruster.R
+      parentName: DEF_Chest
+      position: {x: 0.0036901038, y: 0.003436707, z: -0.0055453167}
+      rotation: {x: 0.9900184, y: 0.111142516, z: 0.040452503, w: 0.076645516}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: DEF_Back_Skirt.L
+      parentName: DEF_Hip
+      position: {x: -0.0014778381, y: 0.005911829, z: -0.0040708645}
+      rotation: {x: 0.99360234, y: -0.105623126, z: -0.019512653, w: -0.03489214}
+      scale: {x: 1.0000004, y: 1, z: 0.9999999}
+    - name: DEF_Back_Skirt.R
+      parentName: DEF_Hip
+      position: {x: 0.001477837, y: 0.005894958, z: -0.0040691053}
+      rotation: {x: 0.99422264, y: 0.09951037, z: 0.020367082, w: -0.03470303}
+      scale: {x: 0.9999968, y: 0.99999994, z: 0.9999996}
+    - name: DEF_THIGH.L
+      parentName: Mech_Skeleton
+      position: {x: -0.006951816, y: -0.000407105, z: 0.023110317}
+      rotation: {x: 0.57187843, y: -0.5154, z: 0.4780708, w: -0.42280757}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.99999976}
+    - name: DEF_SHIN.L
+      parentName: DEF_THIGH.L
+      position: {x: 1.0244548e-10, y: 0.010570609, z: 3.608875e-10}
+      rotation: {x: 0.114409454, y: 0.00010700392, z: 0.31393558, w: 0.94252586}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1.0000001}
+    - name: DEF_THIGH.R
+      parentName: Mech_Skeleton
+      position: {x: 0.0070014284, y: -0.00040710517, z: 0.023110317}
+      rotation: {x: 0.5837804, y: 0.47769117, z: -0.5191078, w: -0.4019189}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000029}
+    - name: DEF_SHIN.R
+      parentName: DEF_THIGH.R
+      position: {x: -0.0000000012852251, y: 0.010570606, z: -9.313225e-11}
+      rotation: {x: 0.12942359, y: -0.000104985505, z: -0.35513845, w: 0.9258111}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: Main_Body
+      parentName: gundam_Base_color_Variation(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sword_Grip
+      parentName: gundam_Base_color_Variation(Clone)
+      position: {x: 1.3485197, y: 1.752513, z: -0.16357589}
+      rotation: {x: -0.31733462, y: -0.054013785, z: -0.012204976, w: 0.9466955}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Sword_Blade
+      parentName: gundam_Base_color_Variation(Clone)
+      position: {x: 1.3485197, y: 1.752513, z: -0.16357589}
+      rotation: {x: -0.31733462, y: -0.054013785, z: -0.012204976, w: 0.9466955}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

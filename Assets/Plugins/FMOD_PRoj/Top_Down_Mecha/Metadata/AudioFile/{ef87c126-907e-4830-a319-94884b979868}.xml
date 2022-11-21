@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{ef87c126-907e-4830-a319-94884b979868}">
+		<property name="assetPath">
+			<value>AR Single Shot (Suppressed).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.7857142857142856</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b9ad1a58-942a-432c-81aa-874bbee8c929}</destination>
+		</relationship>
+	</object>
+</objects>
