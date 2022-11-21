@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{944529dd-4f96-41ce-8c35-1f0cffaa0fac}">
 		<property name="name">
 			<value>Enemy_Explosion</value>
@@ -34,6 +34,9 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{87ec7eba-68e7-404e-a6ff-37e1f52f968f}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{3624d596-f7f7-4523-9ad4-2ab6c4ff7a1c}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{e697a8d5-e593-4cfe-b024-0ff694af9d45}">
