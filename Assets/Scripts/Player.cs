@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float meleeSize;
 
     [Header("References")]
+    [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private ObjectPool bulletPool;
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
     private Vector3 moveInput;
     private Quaternion lookInput;
     private const int rotateRaycastLayerMask = 1 << 6;
-    
+
 
 
 
@@ -88,7 +89,7 @@ public class Player : MonoBehaviour
         if (context.performed)
         {
             transform.LookAt(
-                transform.localPosition + 
+                transform.localPosition +
                 new Vector3(context.ReadValue<Vector2>().x, 0f, context.ReadValue<Vector2>().y)
             );
         }
@@ -97,7 +98,7 @@ public class Player : MonoBehaviour
     public void Attack(InputAction.CallbackContext context)
     {
         if (context.performed)
-        {   
+        {
             Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward * meleeRange, meleeRange, Enemy.layerMask);
             if (hits.Length > 0)
             {
@@ -120,7 +121,7 @@ public class Player : MonoBehaviour
     {
         if (currentMeleeCooldown >= meleeCooldown)
         {
-            // play melee attack animation
+            animator.SetTrigger("onAttack");
             foreach (Collider hit in hits)
             {
                 hit.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(1);
@@ -136,7 +137,7 @@ public class Player : MonoBehaviour
         {
             // play ranged attack animation
             GameObject bullet = bulletPool.GetNext();
-            bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, transform.rotation);
             bullet.SetActive(true);
 
             currentRangedCooldown = 0f;

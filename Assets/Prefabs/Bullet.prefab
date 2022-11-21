@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7480988237916387149}
   - component: {fileID: 3010702815265043129}
   - component: {fileID: 8320958505282813107}
+  - component: {fileID: 789335639342131226}
   m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
@@ -82,6 +83,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -0.5}
+--- !u!114 &789335639342131226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5746599988335372315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6d66912ad40a44cb203a18012a6014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trail: {fileID: 4678285762238670495}
 --- !u!1 &5746599989968934863
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +280,12 @@ PrefabInstance:
 --- !u!4 &4678285762238670494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9101472577643581183, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 4513294069902305377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &4678285762238670495 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 9101472577643581182, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
     type: 3}
   m_PrefabInstance: {fileID: 4513294069902305377}
   m_PrefabAsset: {fileID: 0}
