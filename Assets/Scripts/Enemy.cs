@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public enum EnemyType { NONE, Basic }
 
@@ -18,6 +19,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform model;
 
+    [Header("Sounds")]
+    [SerializeField, EventRef] private string onTakeDamage;
+    [SerializeField, EventRef] private string onDeath;
 
 
 
@@ -37,8 +41,14 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if (currentHealth <= 0) gameObject.SetActive(false);
-
-        // else give feedback
+        if (currentHealth <= 0)
+        {
+            RuntimeManager.PlayOneShot(onDeath);
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            RuntimeManager.PlayOneShotAttached(onTakeDamage, gameObject);
+        }
     }
 }

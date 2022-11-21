@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class Player : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private ObjectPool bulletPool;
+
+    [Header("Sounds")]
+    [SerializeField, EventRef] private string onShotSound;
+    [SerializeField, EventRef] private string onTakeDamageSound;
 
     private Vector3 moveInput;
     private Quaternion lookInput;
@@ -160,12 +165,15 @@ public class Player : MonoBehaviour
             bullet.SetActive(true);
 
             currentRangedCooldown = 0f;
+
+            RuntimeManager.PlayOneShotAttached(onShotSound, bullet);
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        RuntimeManager.PlayOneShotAttached(onTakeDamageSound, gameObject);
 
         // if (currentHealth <= 0)
         // game over
