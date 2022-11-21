@@ -40,11 +40,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -4563098593466678501}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 568905
 --- !u!114 &-4563098593466678501
 MonoBehaviour:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD_PRoj/Top_Down_Mecha/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 638045771551081930
+  lastModified: 638045813989200479
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -81,11 +81,11 @@ MonoBehaviour:
   Banks:
   - {fileID: -4563098593466678501}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 89155
 --- !u!114 &-2203817903179317181
 MonoBehaviour:
@@ -110,29 +110,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6137
---- !u!114 &-2194149390454828090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BGM/BGM_GameOver
-  m_EditorClassIdentifier: 
-  Path: event:/BGM/BGM_GameOver
-  guid: a55e558774e864449f901103690e612b
-  Banks:
-  - {fileID: -4563098593466678501}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 80040
 --- !u!114 &-1322530893535052595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,13 +162,13 @@ MonoBehaviour:
   - {fileID: 7425009213905699598}
   - {fileID: 999914177580313093}
   - {fileID: 3418690288056186258}
-  - {fileID: -2194149390454828090}
+  - {fileID: 1248369557331665467}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4563098593466678501}
   StringsBanks:
   - {fileID: 6247766254621221901}
-  stringsBankWriteTime: 638045771551101929
+  stringsBankWriteTime: 638045813989370510
   cacheVersion: 5
 --- !u!114 &819339702633175905
 MonoBehaviour:
@@ -239,6 +216,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 200
+--- !u!114 &1248369557331665467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM_GameOver
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM_GameOver
+  guid: a55e558774e864449f901103690e612b
+  Banks:
+  - {fileID: -4563098593466678501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 80040
 --- !u!114 &3418690288056186258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD_PRoj/Top_Down_Mecha/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 638045771551101929
+  lastModified: 638045813989370510
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -344,13 +344,13 @@ MonoBehaviour:
   guid: 12de5c696ba59f43b268b973cf00e78a
   Banks:
   - {fileID: -4563098593466678501}
-  IsStream: 1
+  IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 80660
+  Length: 567
 --- !u!114 &7425009213905699598
 MonoBehaviour:
   m_ObjectHideFlags: 0
