@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5746599988335372314}
   - component: {fileID: 7480988237916387149}
   - component: {fileID: 3010702815265043129}
+  - component: {fileID: 74193260340183057}
   m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
@@ -67,6 +68,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!136 &74193260340183057
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5746599988335372315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.5, z: 0.25}
 --- !u!1 &5746599989968934863
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,13 +199,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9101472577643581183, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101472577643581183, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101472577643581183, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101472577643581183, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9101472577643581183, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9101472577643581183, guid: 98efc29d3f49ea04ba2fd92be00a46ed,
         type: 3}
