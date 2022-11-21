@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public static bool isPaused { get; private set; } = false ;
+    public static bool isPaused { get; private set; } = false;
 
 
 
@@ -19,14 +19,14 @@ public class GameController : MonoBehaviour
     public static void Pause()
     {
         UIController.ShowPauseMenu();
-        Time.timeScale = 0f;
         isPaused = true;
+        Time.timeScale = 0f;
     }
 
     public static void Resume()
     {
-        UIController.HidePauseMenu();
         Time.timeScale = 1f;
+        UIController.HidePauseMenu();
         isPaused = false;
     }
 

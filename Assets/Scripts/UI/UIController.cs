@@ -29,6 +29,10 @@ public class UIController : MonoBehaviour
     }
     #endregion
 
+
+
+
+
     #region CLASS METHODS
     public static void ShowPauseMenu()
     {
@@ -51,7 +55,7 @@ public class UIController : MonoBehaviour
         GameController.Restart();
     }
 
-    public void OnClick_MainMenu()
+    public void OnClick_MainMenuButton()
     {
         GameController.MainMenu();
     }
