@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "LookDirectional",
+                    "name": "LookController",
                     "type": "Value",
                     "id": "19355c0a-8de8-4851-9800-03278393a274",
                     "expectedControlType": "Vector2",
@@ -42,9 +42,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MelleeAttack",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "c5604558-4d02-48c7-810d-fb4eb248d7f7",
+                    "id": "1174cd50-83e9-4bbd-8935-1ae4a28114ac",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -213,7 +213,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "LookDirectional",
+                    "action": "LookController",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -224,7 +224,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "LookDirectional",
+                    "action": "LookController",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -235,7 +235,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LookDirectional",
+                    "action": "LookController",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -246,7 +246,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "LookDirectional",
+                    "action": "LookController",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -257,7 +257,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "LookDirectional",
+                    "action": "LookController",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -268,7 +268,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "LookDirectional",
+                    "action": "LookController",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -279,29 +279,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "LookDirectional",
+                    "action": "LookController",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "4100760b-71cf-45c1-b0d2-ca17339ec0eb",
-                    "path": "<Gamepad>/leftTrigger",
+                    "id": "8e9b71ee-ce5b-4b2c-8382-700344908473",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
-                    "action": "MelleeAttack",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "6e010989-8162-4166-9302-580d3315d359",
-                    "path": "<Mouse>/rightButton",
+                    "id": "1835225d-3d2a-433d-98b3-1aa8ce2c72b5",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "MelleeAttack",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
