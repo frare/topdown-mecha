@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyType { NONE, Basic }
+public enum EnemyType { NONE, Seeker, Spinner, Tank }
 
 public class Enemy : MonoBehaviour
 {
