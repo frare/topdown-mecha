@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (GameController.isPaused) return;
+
         transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
 
         currentRangedCooldown += Time.deltaTime;
@@ -59,6 +61,8 @@ public class Player : MonoBehaviour
     #region INPUT SYSTEM ACTION CALLBACKS
     public void Move(InputAction.CallbackContext context)
     {
+        if (GameController.isPaused) return;
+
         if (context.performed)
         {
             moveInput = new Vector3(context.ReadValue<Vector2>().x, 0f, context.ReadValue<Vector2>().y).normalized;
@@ -71,6 +75,8 @@ public class Player : MonoBehaviour
 
     public void LookMouse(InputAction.CallbackContext context)
     {
+        if (GameController.isPaused) return;
+
         if (context.performed)
         {
             Ray ray = Camera.main.ScreenPointToRay(context.ReadValue<Vector2>());
@@ -86,6 +92,8 @@ public class Player : MonoBehaviour
 
     public void LookController(InputAction.CallbackContext context)
     {
+        if (GameController.isPaused) return;
+
         if (context.performed)
         {
             transform.LookAt(
@@ -97,6 +105,8 @@ public class Player : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
+        if (GameController.isPaused) return;
+
         if (context.performed)
         {
             Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward * meleeRange, meleeRange, Enemy.layerMask);
@@ -108,6 +118,15 @@ public class Player : MonoBehaviour
             {
                 RangedAttack();
             }
+        }
+    }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (GameController.isPaused) GameController.Resume();
+            else GameController.Pause();
         }
     }
     #endregion
