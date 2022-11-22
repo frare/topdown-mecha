@@ -37,7 +37,11 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if (currentHealth <= 0) gameObject.SetActive(false);
+        if (currentHealth <= 0) 
+        {
+            EnemyController.OnEnemyDefeated();
+            gameObject.SetActive(false);
+        }
 
         // else give feedback
     }
