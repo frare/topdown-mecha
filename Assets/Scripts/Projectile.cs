@@ -13,6 +13,11 @@ public class Projectile : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody rb;
 
+    private Vector3 nextPosition;
+    private Vector3 direction;
+    private float distance;
+    private int layerMask = 1 << 8 | 1 << 10;
+
 
 
 
@@ -22,17 +27,25 @@ public class Projectile : MonoBehaviour
         currentDisableTime = 0f;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        rb.MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
+        nextPosition = transform.position + (transform.forward * moveSpeed * Time.fixedDeltaTime);
+        direction = nextPosition - transform.position;
+        distance = Vector3.Distance(nextPosition, transform.position);
 
-        if (currentDisableTime >= disableTime) gameObject.SetActive(false);
-        else currentDisableTime += Time.deltaTime;
+        // Raycast the bullet forward to check for collisions manually (had better results than Rigidbody)
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, direction, out hit, distance, layerMask))
+        {
+            if (hit.collider.gameObject.layer == Enemy.layer) hit.collider.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(damage);
+            gameObject.SetActive(false);
+        }
+        else transform.position = nextPosition;
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void LateUpdate()
     {
-        collider.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(damage);
-        gameObject.SetActive(false);
+        if (currentDisableTime >= disableTime) gameObject.SetActive(false);
+        else currentDisableTime += Time.fixedDeltaTime;
     }
 }

@@ -47,7 +47,8 @@ public class Player : MonoBehaviour
     {
         if (GameController.isPaused) return;
 
-        transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
+        rb.AddForce(moveInput * moveSpeed * 10);
+        // transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
 
         currentRangedCooldown += Time.deltaTime;
         currentMeleeCooldown += Time.deltaTime;
@@ -170,6 +171,17 @@ public class Player : MonoBehaviour
         // if (currentHealth <= 0)
         // game over
         // else give feedback
+    }
+    #endregion
+
+
+
+
+
+    #region STATIC METHODS
+    public static Vector3 GetPosition()
+    {
+        return instance.transform.position;
     }
     #endregion
 }

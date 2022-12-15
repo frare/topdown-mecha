@@ -257,9 +257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Main Menu
-
-'
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7dd457f6e55efe24ba36898672030f1b, type: 2}
   m_sharedMaterial: {fileID: -8322624843077555890, guid: 7dd457f6e55efe24ba36898672030f1b,
@@ -366,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c773da17e0d3c2042a16531f48a9cfb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5746599988335372315, guid: ff1356fcbd65a1240a1dd23236ced853, type: 3}
+  prefab: {fileID: 5746599988335372315, guid: 5cea7ccd3a628c5449721d25cd9fe0d8, type: 3}
   amount: 50
   poolAsChild: 1
   dynamicSize: 1
@@ -2296,12 +2294,12 @@ Rigidbody:
   m_GameObject: {fileID: 973654399}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!95 &973654404
 Animator:
@@ -2901,7 +2899,7 @@ GameObject:
   - component: {fileID: 1286124248}
   - component: {fileID: 1286124250}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Event System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
