@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5746599988335372315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5746599989968934859}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  moveSpeed: 200
+  moveSpeed: 100
   disableTime: 5
   rb: {fileID: 3010702815265043129}
 --- !u!54 &3010702815265043129
@@ -78,7 +78,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 5746599988335372315}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 2

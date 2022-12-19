@@ -32,8 +32,7 @@ public class EnemyController : MonoBehaviour
 
         if (instance.enemyDefeatedCount >= instance.waves[instance.currentWave].enemies.Count) 
         {
-            if (instance.currentWave + 1 >= instance.waves.Count) print("defeated final wave");
-            else SpawnNextWave();
+            SpawnNextWave();
         }
     }
 
@@ -45,7 +44,7 @@ public class EnemyController : MonoBehaviour
 
     private IEnumerator SpawnNextWaveCoroutine()
     {
-        currentWave++;
+        currentWave = currentWave < waves.Count ? 0 : currentWave++;
         Wave wave = waves[currentWave];
         enemyDefeatedCount = 0;
 

@@ -27,7 +27,16 @@ public class UIController : MonoBehaviour
         hudObject.SetActive(true);
         pauseObject.SetActive(false);
     }
+
+    private void OnGUI()
+    {
+        if (Application.isEditor || Debug.isDebugBuild) GUI.Label(new Rect(5, 5, 100, 25), ((int)(1f / Time.unscaledDeltaTime)).ToString());
+    }
     #endregion
+
+
+
+
 
     #region CLASS METHODS
     public static void ShowPauseMenu()
@@ -51,7 +60,7 @@ public class UIController : MonoBehaviour
         GameController.Restart();
     }
 
-    public void OnClick_MainMenu()
+    public void OnClick_MainMenuButton()
     {
         GameController.MainMenu();
     }
