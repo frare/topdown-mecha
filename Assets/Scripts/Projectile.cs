@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour
     private Vector3 direction;
     private float distance;
     private int layerMask = 1 << 8 | 1 << 10;
+    private RaycastHit hit;
 
 
 
@@ -34,7 +35,6 @@ public class Projectile : MonoBehaviour
         distance = Vector3.Distance(nextPosition, transform.position);
 
         // Raycast the bullet forward to check for collisions manually (had better results than Rigidbody)
-        RaycastHit hit;
         if (Physics.Raycast(transform.position, direction, out hit, distance, layerMask))
         {
             if (hit.collider.gameObject.layer == Enemy.layer) hit.collider.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(damage);

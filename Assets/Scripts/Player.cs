@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
     {
         if (GameController.isPaused) return;
 
-        rb.AddForce(moveInput * moveSpeed * 10);
+        rb.AddForce(moveInput * moveSpeed);
         // transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
 
         currentRangedCooldown += Time.deltaTime;
