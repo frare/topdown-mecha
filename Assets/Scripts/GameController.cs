@@ -39,4 +39,10 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene("01-MainMenu", LoadSceneMode.Single);
     }
+
+    public static void GameOver()
+    {
+        Pause();
+        SceneManager.LoadSceneAsync("03-GameOver", LoadSceneMode.Single);
+    }
 }

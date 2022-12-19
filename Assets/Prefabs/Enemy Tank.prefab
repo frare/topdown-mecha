@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   health: 3
+  collisionDamage: 1
   moveSpeed: 1
   rb: {fileID: 1608583018}
   model: {fileID: 5816376977123915167}
