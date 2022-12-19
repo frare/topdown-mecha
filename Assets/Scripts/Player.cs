@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public static Player instance;
+    public static int layer = 7;
 
     [Header("Attributes")]
     [SerializeField] private int health;
@@ -17,12 +18,16 @@ public class Player : MonoBehaviour
     private float currentMeleeCooldown;
     [SerializeField] private float meleeRange;
     [SerializeField] private float meleeSize;
+    private bool invulnerable;
+    [SerializeField] private float invulnerabilityTime;
 
     [Header("References")]
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private GameObject model;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private ObjectPool bulletPool;
+    [SerializeField] private FlashBehaviour flash;
 
     private Vector3 moveInput;
     private Quaternion lookInput;
@@ -41,6 +46,7 @@ public class Player : MonoBehaviour
         currentHealth = health;
         currentRangedCooldown = rangedCooldown;
         currentMeleeCooldown = meleeCooldown;
+        invulnerable = false;
     }
 
     private void Update()
@@ -48,7 +54,6 @@ public class Player : MonoBehaviour
         if (GameController.isPaused) return;
 
         rb.AddForce(moveInput * moveSpeed);
-        // transform.localPosition += moveInput * moveSpeed * Time.deltaTime;
 
         currentRangedCooldown += Time.deltaTime;
         currentMeleeCooldown += Time.deltaTime;
@@ -113,7 +118,7 @@ public class Player : MonoBehaviour
             Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward * meleeRange, meleeRange, Enemy.layerMask);
             if (hits.Length > 0)
             {
-                MeleeAtack(hits);
+                MeleeAttack(hits);
             }
             else
             {
@@ -137,7 +142,7 @@ public class Player : MonoBehaviour
 
 
     #region CLASS METHODS
-    private void MeleeAtack(Collider[] hits)
+    private void MeleeAttack(Collider[] hits)
     {
         if (currentMeleeCooldown >= meleeCooldown)
         {
@@ -166,11 +171,21 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        if (invulnerable) return;
 
-        // if (currentHealth <= 0)
-        // game over
-        // else give feedback
+        currentHealth -= damage;
+        UIController.UpdatePlayerHealth(currentHealth);
+        if (currentHealth <= 0) { GameController.GameOver(); }
+        else { StartCoroutine(TakeDamageCoroutine()); }
+    }
+
+    private IEnumerator TakeDamageCoroutine()
+    {
+        invulnerable = true;
+        
+        yield return StartCoroutine(flash.Flash(invulnerabilityTime, .1f));
+
+        invulnerable = false;
     }
     #endregion
 
@@ -178,7 +193,7 @@ public class Player : MonoBehaviour
 
 
 
-    #region STATIC METHODS
+    #region STATIC INSTANCE METHODS
     public static Vector3 GetPosition()
     {
         return instance.transform.position;
