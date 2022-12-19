@@ -42,6 +42,11 @@ public class Enemy : MonoBehaviour
         model.LookAt(new Vector3(Player.GetPosition().x, model.position.y, Player.GetPosition().z));
     }
 
+    protected virtual void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == Player.layer) other.attachedRigidbody.GetComponent<Player>()?.TakeDamage(1);
+    }
+
     public virtual void TakeDamage(int damage)
     {
         currentHealth -= damage;

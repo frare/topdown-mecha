@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour
 
     [Header("HUD")]
     [SerializeField] private GameObject hudObject;
+    [SerializeField] private List<GameObject> healthBars;
+    private Coroutine healthBarCoroutine;
 
     [Header("Pause")]
     [SerializeField] private GameObject pauseObject;
@@ -65,9 +67,28 @@ public class UIController : MonoBehaviour
         GameController.MainMenu();
     }
 
-    private IEnumerator FlashHPBar()
+    public static void UpdatePlayerHealth(int playerHealth)
     {
-        yield return null;
+        if (instance.healthBarCoroutine != null) instance.StopCoroutine(instance.healthBarCoroutine);
+        instance.healthBarCoroutine = instance.StartCoroutine(instance.FlashPlayerHealth(playerHealth));
+    }
+
+    private IEnumerator FlashPlayerHealth(int playerHealth)
+    {
+        playerHealth = Mathf.Clamp(playerHealth, 0, 3);
+        for (int i = 0; i < healthBars.Count; i++) healthBars[i].SetActive(i < playerHealth);
+
+        if (playerHealth != 0 && playerHealth != 3)
+        {
+            for (float time = 0; time < 3f; time += .2f)
+            {
+                healthBars[playerHealth].SetActive(true);
+                yield return new WaitForSeconds(.1f);
+
+                healthBars[playerHealth].SetActive(false);
+                yield return new WaitForSeconds(.1f);
+            }
+        }
     }
     #endregion
 }
