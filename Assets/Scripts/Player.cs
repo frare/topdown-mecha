@@ -10,15 +10,15 @@ public class Player : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] private int health;
-    private int currentHealth;
+    [ReadOnly] [SerializeField] private int currentHealth;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rangedCooldown;
-    private float currentRangedCooldown;
+    [ReadOnly] [SerializeField] private float currentRangedCooldown;
     [SerializeField] private float meleeCooldown;
-    private float currentMeleeCooldown;
+    [ReadOnly] [SerializeField] private float currentMeleeCooldown;
     [SerializeField] private float meleeRange;
     [SerializeField] private float meleeSize;
-    private bool invulnerable;
+    [SerializeField] private bool invulnerable;
     [SerializeField] private float invulnerabilityTime;
 
     [Header("References")]
