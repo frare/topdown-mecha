@@ -32,4 +32,13 @@ public class FlashBehaviour : MonoBehaviour
             yield return new WaitForSeconds(speed);
         }
     }
+
+    public IEnumerator FlashOnce(float speed)
+    {
+        foreach (Renderer renderer in originalMaterials.Keys) renderer.materials = materialVector;
+
+        yield return new WaitForSeconds(speed);
+
+        foreach (Renderer renderer in originalMaterials.Keys) renderer.materials = originalMaterials[renderer];
+    }
 }

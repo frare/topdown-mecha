@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Rigidbody rb;
     [SerializeField] protected Transform model;
     [SerializeField] protected Animator animator;
+    [SerializeField] protected FlashBehaviour flash;
 
 
 
@@ -58,10 +59,16 @@ public class Enemy : MonoBehaviour
             EnemyController.OnEnemyDefeated();
             gameObject.SetActive(false);
         }
+        else
+        {
+            StopCoroutine(flash.FlashOnce(.1f));
+            StartCoroutine(flash.FlashOnce(.1f));
+        }
     }
 
     public virtual void SetElite()
     {
+        isElite = true;
         health = health * (int)(DifficultyManager.difficulty * 10);
         currentHealth = health;
         moveSpeed = moveSpeed / (DifficultyManager.difficulty * 3);
