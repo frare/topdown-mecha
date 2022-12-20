@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    public static int layer = 7;
+    public static readonly int layer = 7;
 
     [Header("Attributes")]
     [SerializeField] private int health;

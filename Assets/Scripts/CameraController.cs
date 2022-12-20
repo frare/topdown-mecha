@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = Player.instance.transform.position + offset + (-transform.forward * zoomDistance);
+        transform.position = Player.GetPosition() + offset + (-transform.forward * zoomDistance);
     }
 
     public static void ChangeZoom(float distance) 
