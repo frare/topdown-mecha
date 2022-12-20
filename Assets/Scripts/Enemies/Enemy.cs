@@ -16,10 +16,13 @@ public class Enemy : MonoBehaviour
     protected int currentHealth;
     [SerializeField] protected float moveSpeed;
     protected float currentMoveSpeed;
+    protected bool isElite;
 
     [Header("References")]
     [SerializeField] protected Rigidbody rb;
     [SerializeField] protected Transform model;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected FlashBehaviour flash;
 
 
 
@@ -56,5 +59,41 @@ public class Enemy : MonoBehaviour
             EnemyController.OnEnemyDefeated();
             gameObject.SetActive(false);
         }
+        else
+        {
+            StopCoroutine(flash.FlashOnce(.1f));
+            StartCoroutine(flash.FlashOnce(.1f));
+        }
+    }
+
+    public virtual void SetElite()
+    {
+        isElite = true;
+        health = health * (int)(DifficultyManager.difficulty * 10);
+        currentHealth = health;
+        moveSpeed = moveSpeed / (DifficultyManager.difficulty * 3);
+        currentMoveSpeed = moveSpeed;
+
+        StopCoroutine(SetEliteCoroutine());
+        StartCoroutine(SetEliteCoroutine());
+    }
+
+    private IEnumerator SetEliteCoroutine()
+    {
+        float difficultyModifier = DifficultyManager.difficulty * 3f;
+        float initialScale = model.localScale.x;
+        float time = 0f;
+        while (time < 1f)
+        {
+            time += Time.deltaTime / 2.5f;
+
+            model.localScale = Vector3.one * Mathf.Lerp(initialScale, difficultyModifier, time);
+            if (animator != null) animator.speed = Mathf.Lerp(1f, 1f / difficultyModifier, time);
+
+            yield return null;
+        }
+
+        model.localScale = Vector3.one * difficultyModifier;
+        if (animator != null) animator.speed = 1f / difficultyModifier;
     }
 }

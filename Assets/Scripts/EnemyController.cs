@@ -9,10 +9,12 @@ public class EnemyController : MonoBehaviour
     [Header("Attributes")]
     private int enemyDefeatedCount = 0;
     private int currentWave = -1;
+    private int waveCountTotal = 0;
+    [SerializeField] private int wavesAmountToSpawnElite;
 
     [Header("References")]
-    [SerializeField] private List<Wave> waves;
-    private List<Enemy> enemies;
+    [SerializeField] private List<Wave> waves = new List<Wave>();
+    private List<Enemy> enemiesAlive = new List<Enemy>();
     private ObjectPool[] enemyPools;
 
     
@@ -32,6 +34,7 @@ public class EnemyController : MonoBehaviour
 
         if (instance.enemyDefeatedCount >= instance.waves[instance.currentWave].enemies.Count) 
         {
+            DifficultyManager.IncreaseDifficulty();
             SpawnNextWave();
         }
     }
@@ -44,20 +47,26 @@ public class EnemyController : MonoBehaviour
 
     private IEnumerator SpawnNextWaveCoroutine()
     {
+        waveCountTotal++;
         currentWave = currentWave < waves.Count ? 0 : currentWave++;
         Wave wave = waves[currentWave];
         enemyDefeatedCount = 0;
+        enemiesAlive.Clear();
 
-        Debug.Log("Spawning wave " + wave.name);
+        string log = "Spawning wave " + wave.name;
         
         yield return new WaitForSeconds(2f);
-
         for (int i = 0; i < wave.enemies.Count; i++)
         {
-            Debug.Log("Spawning enemy " + wave.enemies[i].ToString());
+            log += "\n     Spawning enemy " + wave.enemies[i].ToString();
             GameObject enemy = enemyPools[(int)wave.enemies[i] - 1].GetNext();
+            enemiesAlive.Add(enemy.GetComponent<Enemy>());
             enemy.transform.position = new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
             enemy.SetActive(true);
         }
+
+        if (waveCountTotal % wavesAmountToSpawnElite == 0) enemiesAlive[Random.Range(0, enemiesAlive.Count)].SetElite();
+
+        Debug.Log(log);
     }
 }
