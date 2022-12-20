@@ -1609,6 +1609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 15, z: -9}
+  zoomDistance: 0
 --- !u!4 &652373895
 Transform:
   m_ObjectHideFlags: 0
@@ -3768,6 +3769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669667573}
   - component: {fileID: 1669667574}
+  - component: {fileID: 1669667575}
   m_Layer: 0
   m_Name: Enemy Controller
   m_TagString: Untagged
@@ -3805,8 +3807,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b3b706c8b8baf4f8b3d2aa646409ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wavesAmountToSpawnElite: 1
   waves:
   - {fileID: 11400000, guid: e837eb23bb66c8f45bec533c3123e9d0, type: 2}
+--- !u!114 &1669667575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669667572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508c64572161e054a878bc06cea25aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDifficulty: 1
+  difficultyIncreasePerWave: 0.25
 --- !u!1 &1699698084
 GameObject:
   m_ObjectHideFlags: 0
