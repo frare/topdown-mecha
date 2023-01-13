@@ -6,19 +6,19 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    public static int layer = 7;
+    public static readonly int layer = 7;
 
     [Header("Attributes")]
     [SerializeField] private int health;
-    private int currentHealth;
+    [ReadOnly] [SerializeField] private int currentHealth;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rangedCooldown;
-    private float currentRangedCooldown;
+    [ReadOnly] [SerializeField] private float currentRangedCooldown;
     [SerializeField] private float meleeCooldown;
-    private float currentMeleeCooldown;
+    [ReadOnly] [SerializeField] private float currentMeleeCooldown;
     [SerializeField] private float meleeRange;
     [SerializeField] private float meleeSize;
-    private bool invulnerable;
+    [SerializeField] private bool invulnerable;
     [SerializeField] private float invulnerabilityTime;
 
     [Header("References")]
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
     {
         if (GameController.isPaused) return;
 
-        rb.AddForce(moveInput * moveSpeed);
+        rb.AddForce(moveInput * moveSpeed * 100 * Time.deltaTime);
 
         currentRangedCooldown += Time.deltaTime;
         currentMeleeCooldown += Time.deltaTime;

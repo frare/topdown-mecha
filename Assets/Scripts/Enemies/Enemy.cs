@@ -7,8 +7,8 @@ public enum EnemyType { NONE, Seeker, Spinner, Tank }
 /// <summary> Base class for all the enemies. </summary>
 public class Enemy : MonoBehaviour
 {
-    public static int layer = 8;
-    public static int layerMask = 1 << 8;
+    public static readonly int layer = 8;
+    public static readonly int layerMask = 1 << 8;
 
     [Header("Attributes")]
     [SerializeField] protected EnemyType type;

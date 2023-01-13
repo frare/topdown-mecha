@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  moveSpeed: 100
+  moveSpeed: 1
   rangedCooldown: 0.1
   meleeCooldown: 0.01
   meleeRange: 1.5
