@@ -71,7 +71,7 @@ public class EnemyController : MonoBehaviour
     {
         GameObject enemy = enemyPools[(int)enemyType - 1].GetNext();
         enemiesAlive.Add(enemy.GetComponent<Enemy>());
-        enemy.transform.position = Player.GetPosition() + (Quaternion.Euler(0, Random.Range(0, 359), 0) * Vector3.forward * DifficultyManager.difficulty * 20);
+        enemy.transform.position = Player.GetPosition() + (Quaternion.Euler(0, Random.Range(0, 359), 0) * Vector3.forward * DifficultyManager.difficulty * 10);
         enemy.SetActive(true);
     }
 }

@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
     public virtual void SetElite()
     {
         isElite = true;
-        health = health * (int)(DifficultyManager.difficulty * 10);
+        health = health * (int)(DifficultyManager.difficulty * 3);
         currentHealth = health;
         moveSpeed = moveSpeed / (DifficultyManager.difficulty * 3);
         currentMoveSpeed = moveSpeed;
