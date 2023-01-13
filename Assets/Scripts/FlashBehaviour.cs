@@ -28,7 +28,7 @@ public class FlashBehaviour : MonoBehaviour
             foreach (Renderer renderer in originalMaterials.Keys) renderer.materials = materialVector;
             yield return new WaitForSeconds(speed);
 
-            foreach (Renderer renderer in originalMaterials.Keys) renderer.materials = originalMaterials[renderer];
+            ResetMaterials();
             yield return new WaitForSeconds(speed);
         }
     }
@@ -39,6 +39,11 @@ public class FlashBehaviour : MonoBehaviour
 
         yield return new WaitForSeconds(speed);
 
+        ResetMaterials();
+    }
+
+    public void ResetMaterials()
+    {
         foreach (Renderer renderer in originalMaterials.Keys) renderer.materials = originalMaterials[renderer];
     }
 }

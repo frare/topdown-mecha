@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = health;
         currentMoveSpeed = moveSpeed;
+        flash.ResetMaterials();
     }
 
     protected virtual void OnDisable()
