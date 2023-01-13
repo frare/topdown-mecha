@@ -34,11 +34,11 @@ public class CameraController : MonoBehaviour
     {
         float initialZoom = zoomDistance;
         float time = 0f;
-        while (time < 1f)
+        while (time < 2f)
         {
             time += Time.deltaTime;
 
-            zoomDistance = Mathf.Lerp(initialZoom, distance, time);
+            zoomDistance = Mathf.Lerp(initialZoom, distance, time / 2f);
 
             yield return null;
         }

@@ -146,13 +146,18 @@ public class Player : MonoBehaviour
     {
         if (currentMeleeCooldown >= meleeCooldown)
         {
-            animator.SetTrigger("onAttack");
-            foreach (Collider hit in hits)
-            {
-                hit.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(1);
-            }
+            animator.SetTrigger("onMelee");
 
             currentMeleeCooldown = 0f;
+        }
+    }
+
+    public void MeleeAttackAnimationEvent()
+    {
+        Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward * meleeRange, meleeRange, Enemy.layerMask);
+        foreach (Collider hit in hits)
+        {
+            hit.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(1);
         }
     }
 
@@ -160,7 +165,8 @@ public class Player : MonoBehaviour
     {
         if (currentRangedCooldown >= rangedCooldown)
         {
-            // play ranged attack animation
+            animator.SetTrigger("onShoot");
+
             GameObject bullet = bulletPool.GetNext();
             bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, transform.rotation);
             bullet.SetActive(true);

@@ -59,14 +59,19 @@ public class EnemyController : MonoBehaviour
         for (int i = 0; i < wave.enemies.Count; i++)
         {
             log += "\n     Spawning enemy " + wave.enemies[i].ToString();
-            GameObject enemy = enemyPools[(int)wave.enemies[i] - 1].GetNext();
-            enemiesAlive.Add(enemy.GetComponent<Enemy>());
-            enemy.transform.position = new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
-            enemy.SetActive(true);
+            SpawnEnemy(wave.enemies[i]);
         }
 
         if (waveCountTotal % wavesAmountToSpawnElite == 0) enemiesAlive[Random.Range(0, enemiesAlive.Count)].SetElite();
 
         Debug.Log(log);
+    }
+
+    private void SpawnEnemy(EnemyType enemyType)
+    {
+        GameObject enemy = enemyPools[(int)enemyType - 1].GetNext();
+        enemiesAlive.Add(enemy.GetComponent<Enemy>());
+        enemy.transform.position = Player.GetPosition() + (Quaternion.Euler(0, Random.Range(0, 359), 0) * Vector3.forward * DifficultyManager.difficulty * 10);
+        enemy.SetActive(true);
     }
 }

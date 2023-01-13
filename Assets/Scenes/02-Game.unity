@@ -1994,7 +1994,6 @@ GameObject:
   - component: {fileID: 973654400}
   - component: {fileID: 973654402}
   - component: {fileID: 973654403}
-  - component: {fileID: 973654404}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -2015,13 +2014,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  moveSpeed: 1
+  currentHealth: 0
+  moveSpeed: 100
   rangedCooldown: 0.1
+  currentRangedCooldown: 0
   meleeCooldown: 0.01
+  currentMeleeCooldown: 0
   meleeRange: 1.5
   meleeSize: 2
+  invulnerable: 0
   invulnerabilityTime: 3
-  animator: {fileID: 973654404}
+  animator: {fileID: 1668158582}
   rb: {fileID: 973654403}
   model: {fileID: 1541931510}
   bulletSpawnPoint: {fileID: 1541931509}
@@ -2211,26 +2214,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!95 &973654404
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973654399}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f72a76efdbabbe49885a529425b3948, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1032784483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3759,6 +3742,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664227971}
   m_CullTransparentMesh: 1
+--- !u!1 &1668158580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1293689358939367020, guid: c509570183dee6d4b8159666b3a010f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1541931507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1668158582 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2104714087803231011, guid: c509570183dee6d4b8159666b3a010f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1541931507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1668158583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668158580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bbf4b809bb53a46bb62f25727ceffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1669667572
 GameObject:
   m_ObjectHideFlags: 0
