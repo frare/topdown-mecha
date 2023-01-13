@@ -2015,11 +2015,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  moveSpeed: 1
+  currentHealth: 0
+  moveSpeed: 100
   rangedCooldown: 0.1
+  currentRangedCooldown: 0
   meleeCooldown: 0.01
+  currentMeleeCooldown: 0
   meleeRange: 1.5
   meleeSize: 2
+  invulnerable: 0
   invulnerabilityTime: 3
   animator: {fileID: 973654404}
   rb: {fileID: 973654403}
