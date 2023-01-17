@@ -700,8 +700,6 @@ Transform:
   m_Father: {fileID: 1908024219}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &392271523
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +822,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392271523}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &403607446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,8 +2178,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 2.843, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1239591476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,7 +2332,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268450125}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1001 &1278653984
 PrefabInstance:
   m_ObjectHideFlags: 0
