@@ -55,7 +55,7 @@ MonoBehaviour:
   animator: {fileID: 7986942264341699754}
   flash: {fileID: 9109059282538454112}
   speedUpDistance: 15
-  speedUpModifier: 2.5
+  speedUpModifier: 3
 --- !u!54 &1608583018
 Rigidbody:
   m_ObjectHideFlags: 0
