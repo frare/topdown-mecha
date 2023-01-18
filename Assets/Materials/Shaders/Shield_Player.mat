@@ -46,7 +46,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 1
     - _CastShadows: 1
-    - _Cull: 2
+    - _Cull: 0
     - _DstBlend: 10
     - _Fresnel_Power: 2.68
     - _Noise_Amount: 0.3
@@ -62,8 +62,8 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _Color: {r: 8, g: 8, b: 8, a: 0}
-    - _Fresnel_Color: {r: 0.5568628, g: 1.254902, b: 1.4980392, a: 0}
-    - _Vertex_Direction: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Fresnel_Color: {r: 0.18992527, g: 0.28664917, b: 0.41509438, a: 0}
+    - _Vertex_Direction: {r: 0.1, g: 0.1, b: 0.1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &9024617002339739336
 MonoBehaviour:
