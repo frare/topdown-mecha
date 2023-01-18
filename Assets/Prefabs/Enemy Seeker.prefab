@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3039289604111538802}
-  - component: {fileID: 1608583019}
+  - component: {fileID: 6470921971138497105}
   - component: {fileID: 1608583018}
   - component: {fileID: 5323681266640327632}
   m_Layer: 8
@@ -81,7 +81,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1608583019
+--- !u!114 &6470921971138497105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3039289604111538803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3118a4c9bc800af4bb03df7845948a2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8097e322bbba9804694687cb72559384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
@@ -100,6 +100,7 @@ MonoBehaviour:
   model: {fileID: 5775988990293967682}
   animator: {fileID: 3892737594936143072}
   flash: {fileID: 5323681266640327632}
+  distanceForAnimation: 5
 --- !u!54 &1608583018
 Rigidbody:
   m_ObjectHideFlags: 0

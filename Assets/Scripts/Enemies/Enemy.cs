@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
 
 
 
+    #region VIRTUAL METHODS
     protected virtual void OnEnable()
     {
         currentHealth = health;
@@ -50,6 +51,11 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.layer == Player.layer) other.attachedRigidbody.GetComponent<Player>()?.TakeDamage(1);
     }
+    #endregion
+
+
+
+    
 
     public virtual void TakeDamage(int damage)
     {
