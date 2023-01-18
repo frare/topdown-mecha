@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemySeeker : Enemy
 {
-    [SerializeField] private float distanceForAnimation;
+    [Space(15)]
+    [Header("SEEKER PROPERTIES")]
+    [SerializeField] private float distanceForAttackAnimation;
+
+
 
 
 
@@ -13,7 +17,7 @@ public class EnemySeeker : Enemy
     {
         base.FixedUpdate();
 
-        var attackAnimation = Vector3.Distance(transform.position, Player.GetPosition()) < distanceForAnimation;
+        var attackAnimation = Vector3.Distance(transform.position, Player.GetPosition()) < distanceForAttackAnimation;
         animator.SetBool("isAttacking", attackAnimation);
     }
 }
