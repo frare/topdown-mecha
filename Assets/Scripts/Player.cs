@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     private Vector3 moveInput;
     private Quaternion lookInput;
     private const int rotateRaycastLayerMask = 1 << 6;
+    private Vector2 walkTreeVelocity;
 
 
 
