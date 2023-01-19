@@ -1,5 +1,5 @@
 {
-    "name": "InputMap",
+    "name": "Controls",
     "maps": [
         {
             "name": "Player",
@@ -308,7 +308,7 @@
             ]
         },
         {
-            "name": "UI",
+            "name": "UI (old)",
             "id": "bcf2b6b6-1de0-4c56-9a1e-55f8cb756521",
             "actions": [
                 {
@@ -735,11 +735,11 @@
                 },
                 {
                     "name": "",
-                    "id": "8d66d5ba-88d7-48e6-b1cd-198bbfef7ace",
+                    "id": "6dffe4e5-f8ef-4f86-a2bb-3cbe53b75c43",
                     "path": "<Pen>/tip",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Keyboard&Mouse",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -818,6 +818,67 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "c016dda9-ab56-4e13-8fc0-b51caa1e4520",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Value",
+                    "id": "e92d1849-2382-44c3-9eb7-efaa1f498c71",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b7b2d4f1-5295-4774-a731-e774670d34d9",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "510ecb04-023a-4951-9563-e548282eb9b2",
+                    "path": "<Pen>/tip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bbb9329c-5e12-44dd-9aec-b4f3f2324f9e",
+                    "path": "<Touchscreen>/touch*/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Touch",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "07dc1362-9b88-4c69-9314-97a6c4783917",
+                    "path": "<XRController>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
