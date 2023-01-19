@@ -25,10 +25,11 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject model;
+    [SerializeField] private GameObject bulletPoolPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
-    [SerializeField] private ObjectPool bulletPool;
     [SerializeField] private FlashBehaviour flash;
 
+    private ObjectPool bulletPool;
     private Vector3 moveInput;
     private Quaternion lookInput;
     private const int rotateRaycastLayerMask = 1 << 6;
@@ -48,6 +49,8 @@ public class Player : MonoBehaviour
         currentRangedCooldown = rangedCooldown;
         currentMeleeCooldown = meleeCooldown;
         invulnerable = false;
+
+        bulletPool = Instantiate(bulletPoolPrefab.gameObject).GetComponent<ObjectPool>();
     }
 
     private void Update()
@@ -58,6 +61,11 @@ public class Player : MonoBehaviour
 
         currentRangedCooldown += Time.deltaTime;
         currentMeleeCooldown += Time.deltaTime;
+    }
+
+    private void OnValidate()
+    {
+        currentHealth = health;
     }
     #endregion
 
