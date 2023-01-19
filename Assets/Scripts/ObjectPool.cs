@@ -6,7 +6,7 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
     [SerializeField] private int amount = 10;
-    [SerializeField] private bool poolAsChild = false;
+    [SerializeField] private bool poolAsChild = true;
     [SerializeField] private bool dynamicSize = true;
     private List<GameObject> pooledObjects = new List<GameObject>();
 
