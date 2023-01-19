@@ -64,6 +64,7 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0) 
         {
             EnemyController.OnEnemyDefeated();
+            ExplosionController.SpawnExplosion(transform.position, model.localScale);
             gameObject.SetActive(false);
         }
         else

@@ -381,7 +381,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189876989
 GameObject:
@@ -2662,7 +2662,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1268450125
 GameObject:
@@ -3579,9 +3579,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669573541}
+  - component: {fileID: 1669573542}
   - component: {fileID: 1669573540}
   m_Layer: 0
-  m_Name: Explosions
+  m_Name: Explosion Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3618,6 +3619,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669573542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669573539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcaa61177351c5f4199c876b1c27b105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 1669573540}
 --- !u!1 &1669667572
 GameObject:
   m_ObjectHideFlags: 0
@@ -4535,7 +4549,7 @@ PrefabInstance:
     - target: {fileID: 9211462168561723694, guid: 0d4fa23d9e1ecf4498d12356488af88a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9211462168561723694, guid: 0d4fa23d9e1ecf4498d12356488af88a,
         type: 3}
@@ -4589,9 +4603,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9211462168561723695, guid: 0d4fa23d9e1ecf4498d12356488af88a,
         type: 3}
+      propertyPath: meleeSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9211462168561723695, guid: 0d4fa23d9e1ecf4498d12356488af88a,
+        type: 3}
       propertyPath: bulletPool
       value: 
       objectReference: {fileID: 140214971}
+    - target: {fileID: 9211462168561723695, guid: 0d4fa23d9e1ecf4498d12356488af88a,
+        type: 3}
+      propertyPath: meleeRange
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9211462168561723856, guid: 0d4fa23d9e1ecf4498d12356488af88a,
         type: 3}
       propertyPath: m_Name
