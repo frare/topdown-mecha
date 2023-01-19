@@ -1519,6 +1519,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9211462168561723856, guid: 0d4fa23d9e1ecf4498d12356488af88a,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2800000, guid: 76dc61ff6c2d84b24b0a2ce01dc2842d, type: 3}
+    - target: {fileID: 9211462168561723856, guid: 0d4fa23d9e1ecf4498d12356488af88a,
+        type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
