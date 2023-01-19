@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GetMoveDirection : MonoBehaviour
 {
+    [SerializeField] private Transform target;
+
     private Vector3 movement = Vector3.zero;
     private Vector3 prevpos = Vector3.zero;
     private Vector3 newpos = Vector3.zero;
@@ -19,7 +21,7 @@ public class GetMoveDirection : MonoBehaviour
 
     private void Update()
     {
-        newpos = transform.position;
+        newpos = target.position;
         movement = (newpos - prevpos);
 
         DotProductFwd = Vector3.Dot(fwd, movement) / Time.deltaTime;
@@ -33,9 +35,9 @@ public class GetMoveDirection : MonoBehaviour
 
     private void LateUpdate()
     {
-        prevpos = transform.position;
+        prevpos = target.position;
 
-        fwd = transform.forward;
-        rig = transform.right;
+        fwd = target.forward;
+        rig = target.right;
     }
 }

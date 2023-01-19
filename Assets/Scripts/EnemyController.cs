@@ -62,7 +62,7 @@ public class EnemyController : MonoBehaviour
             SpawnEnemy(wave.enemies[i]);
         }
 
-        if (waveCountTotal % wavesAmountToSpawnElite == 0) enemiesAlive[Random.Range(0, enemiesAlive.Count)].SetElite();
+        if (wave.hasElites && waveCountTotal % wavesAmountToSpawnElite == 0) enemiesAlive[Random.Range(0, enemiesAlive.Count)].SetElite();
 
         Debug.Log(log);
     }

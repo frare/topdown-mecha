@@ -18,7 +18,10 @@ public class EnemySpinner : Enemy
     {
         rb.MovePosition(transform.position + (Player.GetPosition() - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
 
-        float distanceToPlayer = Vector2.Distance(transform.position, Player.GetPosition());
+        var distanceToPlayer = Vector2.Distance(transform.position, Player.GetPosition());
         currentMoveSpeed = distanceToPlayer <= speedUpDistance ? moveSpeed * speedUpModifier : moveSpeed;
+
+        var attackAnimation = Vector3.Distance(transform.position, Player.GetPosition()) < speedUpDistance;
+        animator.SetBool("isAttacking", attackAnimation);
     }
 }

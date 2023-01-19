@@ -26,11 +26,11 @@ public class Player_AnimatorControl : MonoBehaviour
 
     private void Update()
     {
-        var crossRig = moveDirection.DotProductRig;
-        var crossFwd = moveDirection.DotProductFwd;
+        var dotRig = moveDirection.DotProductRig;
+        var dotFwd = moveDirection.DotProductFwd;
 
-        currentVelX = Mathf.Lerp(currentVelX, Mathf.Clamp(crossRig * XMult, -1, 1), Time.deltaTime * velXLerp);
-        currentVelY = Mathf.Lerp(currentVelY, Mathf.Clamp(crossFwd * YMult, -1, 1), Time.deltaTime * velYLerp);
+        currentVelX = Mathf.Lerp(currentVelX, Mathf.Clamp(dotRig * XMult, -1, 1), Time.deltaTime * velXLerp);
+        currentVelY = Mathf.Lerp(currentVelY, Mathf.Clamp(dotFwd * YMult, -1, 1), Time.deltaTime * velYLerp);
 
         animator.SetFloat("VelX", currentVelX);
         animator.SetFloat("VelY", currentVelY);
