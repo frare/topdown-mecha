@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
     public static readonly int layer = 7;
+    public static Vector3 position { get { return instance.transform.position; } private set { instance.transform.position = value; } }
 
     [Header("Attributes")]
     [SerializeField] private int health;
@@ -208,17 +209,6 @@ public class Player : MonoBehaviour
         yield return StartCoroutine(flash.Flash(invulnerabilityTime, .1f));
 
         invulnerable = false;
-    }
-    #endregion
-
-
-
-
-
-    #region STATIC INSTANCE METHODS
-    public static Vector3 GetPosition()
-    {
-        return instance.transform.position;
     }
     #endregion
 }

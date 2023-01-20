@@ -16,12 +16,12 @@ public class EnemySpinner : Enemy
 
     protected override void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (Player.GetPosition() - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
+        rb.MovePosition(transform.position + (Player.position - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
 
-        var distanceToPlayer = Vector2.Distance(transform.position, Player.GetPosition());
+        var distanceToPlayer = Vector2.Distance(transform.position, Player.position);
         currentMoveSpeed = distanceToPlayer <= speedUpDistance ? moveSpeed * speedUpModifier : moveSpeed;
 
-        var attackAnimation = Vector3.Distance(transform.position, Player.GetPosition()) < speedUpDistance;
+        var attackAnimation = Vector3.Distance(transform.position, Player.position) < speedUpDistance;
         animator.SetBool("isAttacking", attackAnimation);
     }
 }

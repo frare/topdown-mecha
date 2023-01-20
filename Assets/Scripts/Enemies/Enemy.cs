@@ -24,6 +24,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected FlashBehaviour flash;
 
+    public delegate void EnemyDefeated(Enemy enemy);
+    public event EnemyDefeated OnEnemyDefeated;
+
 
 
 
@@ -43,8 +46,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (Player.GetPosition() - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
-        model.LookAt(new Vector3(Player.GetPosition().x, model.position.y, Player.GetPosition().z));
+        rb.MovePosition(transform.position + (Player.position - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
+        model.LookAt(new Vector3(Player.position.x, model.position.y, Player.position.z));
     }
 
     protected virtual void OnTriggerStay(Collider other)
@@ -63,9 +66,9 @@ public class Enemy : MonoBehaviour
 
         if (currentHealth <= 0) 
         {
-            EnemyController.OnEnemyDefeated();
             ExplosionController.SpawnExplosion(transform.position, model.localScale);
             gameObject.SetActive(false);
+            if (OnEnemyDefeated != null) OnEnemyDefeated(this);
         }
         else
         {
