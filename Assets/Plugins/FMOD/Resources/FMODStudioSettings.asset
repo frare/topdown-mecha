@@ -247,34 +247,34 @@ MonoBehaviour:
   Properties:
     LiveUpdate:
       Value: 0
-      HasValue: 0
+      HasValue: 1
     Overlay:
       Value: 0
-      HasValue: 0
+      HasValue: 1
     Logging:
       Value: 0
       HasValue: 0
     SampleRate:
       Value: 0
-      HasValue: 0
+      HasValue: 1
     BuildDirectory:
-      Value: 
-      HasValue: 0
+      Value: Desktop
+      HasValue: 1
     SpeakerMode:
-      Value: 0
-      HasValue: 0
+      Value: 3
+      HasValue: 1
     VirtualChannelCount:
-      Value: 0
-      HasValue: 0
+      Value: 128
+      HasValue: 1
     RealChannelCount:
-      Value: 0
-      HasValue: 0
+      Value: 32
+      HasValue: 1
     DSPBufferLength:
       Value: 0
-      HasValue: 0
+      HasValue: 1
     DSPBufferCount:
       Value: 0
-      HasValue: 0
+      HasValue: 1
     Plugins:
       Value: []
       HasValue: 1
@@ -283,7 +283,7 @@ MonoBehaviour:
       HasValue: 1
     CallbackHandler:
       Value: {fileID: 0}
-      HasValue: 0
+      HasValue: 1
   outputType: 
 --- !u!114 &-5657966822998929826
 MonoBehaviour:
@@ -528,8 +528,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: 
-  sourceBankPath: 
+  sourceProjectPath: Assets/Plugins/FMOD_PRoj/Top_Down_Mecha/Top_Down_Mecha.fspro
+  sourceBankPath: Assets\Plugins\FMOD_PRoj\Top_Down_Mecha\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -548,7 +548,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

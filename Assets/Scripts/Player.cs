@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject bulletPoolPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private FlashBehaviour flash;
+    [SerializeField] private List<ParticleSystem> thrusterParticles;
+    [SerializeField] private float thrusterMinimumSize;
 
     private ObjectPool bulletPool;
     private Vector3 moveInput;
@@ -46,8 +48,8 @@ public class Player : MonoBehaviour
         Player.instance = this;
 
         currentHealth = health;
-        currentRangedCooldown = rangedCooldown;
-        currentMeleeCooldown = meleeCooldown;
+        currentRangedCooldown = 0;
+        currentMeleeCooldown = 0;
         invulnerable = false;
 
         bulletPool = Instantiate(bulletPoolPrefab.gameObject).GetComponent<ObjectPool>();
@@ -58,9 +60,12 @@ public class Player : MonoBehaviour
         if (GameController.isPaused) return;
 
         rb.AddForce(moveInput * moveSpeed * 100 * Time.deltaTime);
+        var thrusterSize = Mathf.Lerp(thrusterMinimumSize, 1f, rb.velocity.magnitude / 15);
+        foreach (ParticleSystem thruster in thrusterParticles) 
+            thruster.transform.localScale = new Vector3(1f, 1f, thrusterSize);
 
-        currentRangedCooldown += Time.deltaTime;
-        currentMeleeCooldown += Time.deltaTime;
+        if (currentRangedCooldown > 0) currentRangedCooldown -= Time.deltaTime;
+        if (currentMeleeCooldown > 0) currentMeleeCooldown -= Time.deltaTime;
     }
 
     private void OnValidate()
@@ -153,11 +158,11 @@ public class Player : MonoBehaviour
     #region CLASS METHODS
     private void MeleeAttack(Collider[] hits)
     {
-        if (currentMeleeCooldown >= meleeCooldown)
+        if (currentMeleeCooldown <= 0f)
         {
             animator.SetTrigger("onMelee");
 
-            currentMeleeCooldown = 0f;
+            currentMeleeCooldown = meleeCooldown;
         }
     }
 
@@ -172,7 +177,7 @@ public class Player : MonoBehaviour
 
     private void RangedAttack()
     {
-        if (currentRangedCooldown >= rangedCooldown)
+        if (currentRangedCooldown <= 0f)
         {
             animator.SetTrigger("onShoot");
 
@@ -180,7 +185,7 @@ public class Player : MonoBehaviour
             bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, transform.rotation);
             bullet.SetActive(true);
 
-            currentRangedCooldown = 0f;
+            currentRangedCooldown = rangedCooldown;
         }
     }
 
