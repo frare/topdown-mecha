@@ -100,7 +100,7 @@ MonoBehaviour:
   model: {fileID: 5775988990293967682}
   animator: {fileID: 3892737594936143072}
   flash: {fileID: 5323681266640327632}
-  distanceForAnimation: 5
+  distanceForAttackAnimation: 5
 --- !u!54 &1608583018
 Rigidbody:
   m_ObjectHideFlags: 0

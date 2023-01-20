@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3266670097685271608}
   - component: {fileID: 3266670097685271609}
   m_Layer: 0
-  m_Name: Smoke_Trail_Player
+  m_Name: Player_Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
