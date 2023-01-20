@@ -7,6 +7,7 @@ public class ExplosionController : MonoBehaviour
     public static ExplosionController instance;
 
     [SerializeField] private ObjectPool pool;
+    [SerializeField] private Vector3 offset;
 
 
 
@@ -20,7 +21,7 @@ public class ExplosionController : MonoBehaviour
     public static void SpawnExplosion(Vector3 position, Vector3 scale)
     {
         var explosion = instance.pool.GetNext();
-        explosion.transform.position = position;
+        explosion.transform.position = position + instance.offset;
         explosion.transform.localScale = scale;
         explosion.SetActive(true);
     }
