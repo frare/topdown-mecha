@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] private FlashBehaviour flash;
     [SerializeField] private List<ParticleSystem> thrusterParticles;
     [SerializeField] private float thrusterMinimumSize;
+    [SerializeField] private ParticleSystem muzzleParticles;
 
     private ObjectPool bulletPool;
     private Vector3 moveInput;
@@ -181,9 +182,10 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("onShoot");
 
-            GameObject bullet = bulletPool.GetNext();
+            var bullet = bulletPool.GetNext();
             bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, transform.rotation);
             bullet.SetActive(true);
+            muzzleParticles.Play();
 
             currentRangedCooldown = rangedCooldown;
         }
