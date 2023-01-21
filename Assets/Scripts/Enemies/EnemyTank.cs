@@ -17,7 +17,7 @@ public class EnemyTank : Enemy
 
     protected override void FixedUpdate()
     {
-        vectorToPlayer = (Player.GetPosition() - transform.position);
+        vectorToPlayer = (Player.position - transform.position);
 
         rb.MovePosition(transform.position + vectorToPlayer.normalized * currentMoveSpeed * Time.deltaTime);
         body.LookAt(vectorToPlayer);

@@ -28,17 +28,6 @@ public class EnemyController : MonoBehaviour
         enemyPools = GetComponentsInChildren<ObjectPool>(true);
     }
 
-    public static void OnEnemyDefeated()
-    {
-        instance.enemyDefeatedCount++;
-
-        if (instance.enemyDefeatedCount >= instance.waves[instance.currentWave].enemies.Count) 
-        {
-            DifficultyManager.IncreaseDifficulty();
-            SpawnNextWave();
-        }
-    }
-
     public static void SpawnNextWave()
     {
         instance.StopCoroutine(instance.SpawnNextWaveCoroutine());
@@ -69,9 +58,26 @@ public class EnemyController : MonoBehaviour
 
     private void SpawnEnemy(EnemyType enemyType)
     {
-        GameObject enemy = enemyPools[(int)enemyType - 1].GetNext();
+        var enemy = enemyPools[(int)enemyType - 1].GetNext().GetComponent<Enemy>();
+
+        enemy.OnEnemyDefeated += OnEnemyDefeated;
+
         enemiesAlive.Add(enemy.GetComponent<Enemy>());
-        enemy.transform.position = Player.GetPosition() + (Quaternion.Euler(0, Random.Range(0, 359), 0) * Vector3.forward * DifficultyManager.difficulty * 10);
-        enemy.SetActive(true);
+
+        enemy.transform.position = Player.position + (Quaternion.Euler(0, Random.Range(0, 359), 0) * Vector3.forward * DifficultyManager.difficulty * 10);
+        enemy.gameObject.SetActive(true);
+    }
+
+    private void OnEnemyDefeated(Enemy enemy)
+    {
+        enemy.OnEnemyDefeated -= OnEnemyDefeated;
+
+        instance.enemyDefeatedCount++;
+
+        if (instance.enemyDefeatedCount >= instance.waves[instance.currentWave].enemies.Count) 
+        {
+            DifficultyManager.IncreaseDifficulty();
+            SpawnNextWave();
+        }
     }
 }

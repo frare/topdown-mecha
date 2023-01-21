@@ -55,7 +55,7 @@ MonoBehaviour:
   currentRangedCooldown: 0
   meleeCooldown: 0.1
   currentMeleeCooldown: 0
-  meleeRange: 2.5
+  meleeRange: 2.25
   meleeSize: 3
   invulnerable: 0
   invulnerabilityTime: 3

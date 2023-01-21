@@ -17,7 +17,7 @@ public class EnemySeeker : Enemy
     {
         base.FixedUpdate();
 
-        var attackAnimation = Vector3.Distance(transform.position, Player.GetPosition()) < distanceForAttackAnimation;
+        var attackAnimation = Vector3.Distance(transform.position, Player.position) < distanceForAttackAnimation;
         animator.SetBool("isAttacking", attackAnimation);
     }
 }
