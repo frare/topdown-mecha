@@ -11,6 +11,11 @@ public class Enemy : MonoBehaviour
     public static readonly int layer = 8;
     public static readonly int layerMask = 1 << 8;
 
+    #region EVENTS
+    public delegate void EnemyDefeated(Enemy enemy);
+    public event EnemyDefeated OnEnemyDefeated;
+    #endregion
+
     [Header("Attributes")]
     [SerializeField] protected EnemyType type;
     [SerializeField] protected int maxHealth;
@@ -29,9 +34,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected FlashBehaviour flash;
     [SerializeField] protected NavMeshAgent navMeshAgent;
-
-    public delegate void EnemyDefeated(Enemy enemy);
-    public event EnemyDefeated OnEnemyDefeated;
 
 
 
