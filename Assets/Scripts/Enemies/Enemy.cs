@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public enum EnemyType { NONE, Seeker, Spinner, Tank }
 
@@ -12,10 +13,14 @@ public class Enemy : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] protected EnemyType type;
-    [SerializeField] protected int health;
-    protected int currentHealth;
+    [SerializeField] protected int maxHealth;
+    [ReadOnly] [SerializeField] protected int currentHealth;
     [SerializeField] protected float moveSpeed;
-    protected float currentMoveSpeed;
+    protected float currentMoveSpeed 
+    { 
+        get { return navMeshAgent.speed; } 
+        set { navMeshAgent.speed = value; }
+    }
     protected bool isElite;
 
     [Header("References")]
@@ -23,6 +28,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Transform model;
     [SerializeField] protected Animator animator;
     [SerializeField] protected FlashBehaviour flash;
+    [SerializeField] protected NavMeshAgent navMeshAgent;
 
     public delegate void EnemyDefeated(Enemy enemy);
     public event EnemyDefeated OnEnemyDefeated;
@@ -34,9 +40,11 @@ public class Enemy : MonoBehaviour
     #region VIRTUAL METHODS
     protected virtual void OnEnable()
     {
-        currentHealth = health;
+        currentHealth = maxHealth;
         currentMoveSpeed = moveSpeed;
         flash.ResetMaterials();
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.speed = currentMoveSpeed;
     }
 
     protected virtual void OnDisable()
@@ -46,7 +54,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (Player.position - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
+        navMeshAgent.destination = Player.position;
+        // rb.MovePosition(transform.position + (Player.position - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
         model.LookAt(new Vector3(Player.position.x, model.position.y, Player.position.z));
     }
 
@@ -80,8 +89,8 @@ public class Enemy : MonoBehaviour
     public virtual void SetElite()
     {
         isElite = true;
-        health = health * (int)(DifficultyManager.difficulty * 3);
-        currentHealth = health;
+        maxHealth = maxHealth * (int)(DifficultyManager.difficulty * 3);
+        currentHealth = maxHealth;
         moveSpeed = moveSpeed / (DifficultyManager.difficulty * 3);
         currentMoveSpeed = moveSpeed;
 
