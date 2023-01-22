@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 6470921971138497105}
   - component: {fileID: 1608583018}
   - component: {fileID: 5323681266640327632}
+  - component: {fileID: -7135010412311659384}
   m_Layer: 8
   m_Name: Enemy Seeker
   m_TagString: Untagged
@@ -100,7 +101,8 @@ MonoBehaviour:
   model: {fileID: 5775988990293967682}
   animator: {fileID: 3892737594936143072}
   flash: {fileID: 5323681266640327632}
-  distanceForAttackAnimation: 5
+  navMeshAgent: {fileID: -7135010412311659384}
+  distanceForAttackAnimation: 7.5
 --- !u!54 &1608583018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,6 +132,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 2bfea43fc5fad1c41b6121c8422986a2, type: 2}
+--- !u!195 &-7135010412311659384
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3039289604111538803}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.6
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 3
 --- !u!1001 &4314084446199040414
 PrefabInstance:
   m_ObjectHideFlags: 0

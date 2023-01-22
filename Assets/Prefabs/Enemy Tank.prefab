@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 3039289604111538802}
   - component: {fileID: -2205741495144791174}
   - component: {fileID: 1608583018}
+  - component: {fileID: -7812767525068821138}
   m_Layer: 8
   m_Name: Enemy Tank
   m_TagString: Untagged
@@ -86,6 +87,7 @@ MonoBehaviour:
   model: {fileID: 7936521895434176177}
   animator: {fileID: 0}
   flash: {fileID: 2984171294843523496}
+  navMeshAgent: {fileID: -7812767525068821138}
   body: {fileID: 5816376977123915167}
   shield: {fileID: 2530227796105225361}
   shieldSpeed: 0.1
@@ -105,6 +107,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!195 &-7812767525068821138
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3039289604111538803}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.6
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 3
 --- !u!1 &5816376977123915166
 GameObject:
   m_ObjectHideFlags: 0

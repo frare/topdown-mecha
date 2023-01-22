@@ -16,7 +16,8 @@ public class EnemySpinner : Enemy
 
     protected override void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (Player.position - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
+        navMeshAgent.destination = Player.position;
+        // rb.MovePosition(transform.position + (Player.position - transform.position).normalized * currentMoveSpeed * Time.deltaTime);
 
         var distanceToPlayer = Vector2.Distance(transform.position, Player.position);
         currentMoveSpeed = distanceToPlayer <= speedUpDistance ? moveSpeed * speedUpModifier : moveSpeed;

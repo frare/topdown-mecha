@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Test Wave
   m_EditorClassIdentifier: 
   hasElites: 0
-  enemies: 02000000
+  enemies: 010000000200000003000000
