@@ -13,8 +13,8 @@ public class Enemy : MonoBehaviour
 
     [Header("Attributes")]
     [SerializeField] protected EnemyType type;
-    [SerializeField] protected int health;
-    protected int currentHealth;
+    [SerializeField] protected int maxHealth;
+    [ReadOnly] [SerializeField] protected int currentHealth;
     [SerializeField] protected float moveSpeed;
     protected float currentMoveSpeed 
     { 
@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
     #region VIRTUAL METHODS
     protected virtual void OnEnable()
     {
-        currentHealth = health;
+        currentHealth = maxHealth;
         currentMoveSpeed = moveSpeed;
         flash.ResetMaterials();
         navMeshAgent.updateRotation = false;
@@ -89,8 +89,8 @@ public class Enemy : MonoBehaviour
     public virtual void SetElite()
     {
         isElite = true;
-        health = health * (int)(DifficultyManager.difficulty * 3);
-        currentHealth = health;
+        maxHealth = maxHealth * (int)(DifficultyManager.difficulty * 3);
+        currentHealth = maxHealth;
         moveSpeed = moveSpeed / (DifficultyManager.difficulty * 3);
         currentMoveSpeed = moveSpeed;
 

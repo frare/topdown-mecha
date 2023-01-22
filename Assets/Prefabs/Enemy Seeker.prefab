@@ -95,7 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  health: 2
+  maxHealth: 2
+  currentHealth: 0
   moveSpeed: 2
   rb: {fileID: 1608583018}
   model: {fileID: 5775988990293967682}

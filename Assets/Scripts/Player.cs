@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public static Vector3 position { get { return instance.transform.position; } private set { instance.transform.position = value; } }
 
     [Header("Attributes")]
-    [SerializeField] private int health;
+    [SerializeField] private int maxHealth;
     [ReadOnly] [SerializeField] private int currentHealth;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rangedCooldown;
@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     {
         Player.instance = this;
 
-        currentHealth = health;
+        currentHealth = maxHealth;
         currentRangedCooldown = 0;
         currentMeleeCooldown = 0;
         invulnerable = false;
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
 
     private void OnValidate()
     {
-        currentHealth = health;
+        currentHealth = maxHealth;
     }
     #endregion
 
