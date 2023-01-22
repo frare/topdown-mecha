@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
     public static readonly int layer = 7;
-    public static Vector3 position { get { return instance.transform.position; } private set { instance.transform.position = value; } }
+    public static Vector3 position { get { return instance.transform.position; } }
+    public static int health { get { return instance.currentHealth; } }
 
     [Header("Attributes")]
     [SerializeField] private int maxHealth;
