@@ -1,8 +1,9 @@
-using FMODUnity;
+// using FMODUnity;
 using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
 {
+    /*
     public enum BGMusic
     {
         gameplay,
@@ -40,4 +41,5 @@ public class SoundPlayer : MonoBehaviour
                 break;
         }
     }
+    */
 }
