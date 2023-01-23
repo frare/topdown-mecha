@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class EnemyTank : Enemy
 {
+    public static readonly int shieldLayer = 11;
+
     [Space(15)]
     [Header("TANK PROPERTIES")]
     [SerializeField] protected Transform body;
     [SerializeField] protected Transform shield;
     [SerializeField] protected float shieldRotationSpeed;
+
     private Vector3 directionToPlayer;
+    private Coroutine shieldDamagedCoroutine;
 
 
 
@@ -25,5 +29,24 @@ public class EnemyTank : Enemy
 
         var targetAngle = Vector3.SignedAngle(transform.forward, directionToPlayer, Vector3.up);
         shield.localEulerAngles = new Vector3(0f, Mathf.MoveTowardsAngle(shield.localEulerAngles.y, targetAngle, shieldRotationSpeed * 360 * Time.deltaTime), 0f);
+    }
+
+    public void ShieldDamaged()
+    {
+        if (shieldDamagedCoroutine != null) StopCoroutine(shieldDamagedCoroutine);
+        shieldDamagedCoroutine = StartCoroutine(ShieldDamagedCoroutine());
+    }
+
+    private IEnumerator ShieldDamagedCoroutine()
+    {
+        var time = 0f;
+        while (time < 1f)
+        {
+            time += Time.deltaTime;
+            shield.localScale = Vector3.Lerp(Vector3.one * 1.5f, Vector3.one, time);
+
+            yield return null;
+        }
+        shield.localScale = Vector3.one;
     }
 }

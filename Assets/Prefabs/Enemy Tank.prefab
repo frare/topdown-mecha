@@ -91,7 +91,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: -7812767525068821138}
   body: {fileID: 5816376977123915167}
   shield: {fileID: 2530227796105225361}
-  shieldSpeed: 0.1
+  shieldRotationSpeed: 15
 --- !u!54 &1608583018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2530227796105225361}
   - component: {fileID: 403600298992635654}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 22093470a16e68042823f81c45685309,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22093470a16e68042823f81c45685309, type: 3}

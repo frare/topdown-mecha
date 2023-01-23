@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
     private Vector3 nextPosition;
     private Vector3 direction;
     private float distance;
-    private int layerMask = 1 << 8 | 1 << 10;
+    private int layerMask = 1 << 8 | 1 << 10 | 1 << 11;
     private RaycastHit hit;
 
 
@@ -38,6 +38,8 @@ public class Projectile : MonoBehaviour
         if (Physics.Raycast(new Vector3(transform.position.x, 0f, transform.position.z), direction, out hit, distance, layerMask))
         {
             if (hit.collider.gameObject.layer == Enemy.layer) hit.collider.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(damage);
+            else if (hit.collider.gameObject.layer == EnemyTank.shieldLayer) hit.collider.attachedRigidbody.GetComponent<EnemyTank>()?.ShieldDamaged();
+
             gameObject.SetActive(false);
         }
         else transform.position = nextPosition;
