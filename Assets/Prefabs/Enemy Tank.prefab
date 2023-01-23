@@ -91,7 +91,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: -7812767525068821138}
   body: {fileID: 5816376977123915167}
   shield: {fileID: 2530227796105225361}
-  shieldRotationSpeed: 15
+  shieldRotationSpeed: 0.1
 --- !u!54 &1608583018
 Rigidbody:
   m_ObjectHideFlags: 0
