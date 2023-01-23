@@ -118,7 +118,7 @@ Material:
     - _GlossTextureRotate: 0
     - _GlossTextureSoftness: 0
     - _Glossiness: 0.6
-    - _HighlightColorPower: 1
+    - _HighlightColorPower: 5
     - _LightAffectOutlineColor: 1
     - _LightAffectRimLightColor: 1
     - _LightAffectShadow: 1
@@ -218,7 +218,7 @@ Material:
     - _CustomLightDirection: {r: 0, g: 0, b: 10, a: 0}
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.9911022, g: 0.9911022, b: 0.19806935, a: 1}
+    - _MainColor: {r: 2.8062434, g: 2.8062434, b: 0.56568545, a: 1}
     - _OutlineColor: {r: 16.94838, g: 16.94838, b: 16.94838, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 0}
     - _OverallShadowColor: {r: 0.53960484, g: 0.5437336, b: 0.8113208, a: 1}
