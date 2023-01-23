@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class Player : MonoBehaviour
         if (GameController.isPaused) return;
 
         rb.AddForce(moveInput * moveSpeed * 100 * Time.deltaTime);
-        var thrusterSize = Mathf.Lerp(thrusterMinimumSize, 1f, rb.velocity.magnitude / 15);
+        float thrusterSize = Mathf.Lerp(thrusterMinimumSize, 1f, rb.velocity.magnitude / 15);
         foreach (ParticleSystem thruster in thrusterParticles) 
             thruster.transform.localScale = new Vector3(1f, 1f, thrusterSize);
 
@@ -133,14 +134,8 @@ public class Player : MonoBehaviour
         if (context.performed)
         {
             Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward * meleeRange, meleeRange, Enemy.layerMask);
-            if (hits.Length > 0)
-            {
-                MeleeAttack(hits);
-            }
-            else
-            {
-                RangedAttack();
-            }
+            if (hits.Length > 0) MeleeAttack(hits);
+            else RangedAttack();
         }
     }
 
@@ -169,9 +164,26 @@ public class Player : MonoBehaviour
         }
     }
 
+    // called when the swing animation hits the point where it should damage the enemies
     public void MeleeAttackAnimationEvent()
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward * meleeRange, meleeRange, Enemy.layerMask);
+        List<Collider> hits = new List<Collider>(Physics.OverlapSphere(
+            transform.position + transform.forward * meleeRange, 
+            meleeRange, 
+            Enemy.layerMask | EnemyTank.shieldLayerMask)
+        );
+
+        Collider shield = hits.FirstOrDefault(x => x.gameObject.layer == EnemyTank.shieldLayer);
+        if (shield != null)
+        {
+            hits.Remove(shield);
+            if (Vector3.Dot(shield.transform.forward, transform.forward) < .5f)
+            {
+                shield.attachedRigidbody.GetComponent<EnemyTank>()?.ShieldDamaged();
+                return;
+            }
+        }
+
         foreach (Collider hit in hits)
         {
             hit.attachedRigidbody.GetComponent<Enemy>()?.TakeDamage(1);
@@ -184,7 +196,7 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("onShoot");
 
-            var bullet = bulletPool.GetNext();
+            GameObject bullet = bulletPool.GetNext();
             bullet.transform.SetPositionAndRotation(bulletSpawnPoint.position, transform.rotation);
             bullet.SetActive(true);
             muzzleParticles.Play();

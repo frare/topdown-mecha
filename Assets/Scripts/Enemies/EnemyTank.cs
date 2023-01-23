@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyTank : Enemy
 {
     public static readonly int shieldLayer = 11;
+    public static readonly int shieldLayerMask = 1 << shieldLayer;
 
     [Space(15)]
     [Header("TANK PROPERTIES")]

@@ -9,7 +9,7 @@ public enum EnemyType { NONE, Seeker, Spinner, Tank }
 public class Enemy : MonoBehaviour
 {
     public static readonly int layer = 8;
-    public static readonly int layerMask = 1 << 8;
+    public static readonly int layerMask = 1 << layer;
 
     #region EVENTS
     public delegate void EnemyDefeated(Enemy enemy);
