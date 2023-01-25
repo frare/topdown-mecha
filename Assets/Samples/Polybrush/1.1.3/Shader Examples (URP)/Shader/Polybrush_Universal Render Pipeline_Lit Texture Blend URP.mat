@@ -22,11 +22,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlbedoTexture1:
-        m_Texture: {fileID: 2800000, guid: 38788cbc0920ed44f89f2f11c835eb1e, type: 3}
+        m_Texture: {fileID: 2800000, guid: ad1c1791a019a5544956b1421005ef65, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture2:
-        m_Texture: {fileID: 2800000, guid: ab2d7eaea31c1674fbaf57f99678f927, type: 3}
+        m_Texture: {fileID: 2800000, guid: 95371f3bfc69bda46b800fb205dba899, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture3:
@@ -58,8 +58,8 @@ Material:
     m_Colors:
     - _tiling_Tex_01: {r: 100, g: 100, b: 0, a: 0}
     - _tiling_Tex_02: {r: 150, g: 150, b: 0, a: 0}
-    - _tiling_Tex_03: {r: 100, g: 100, b: 0, a: 0}
-    - _tiling_Tex_04: {r: 100, g: 100, b: 0, a: 0}
+    - _tiling_Tex_03: {r: 200, g: 200, b: 0, a: 0}
+    - _tiling_Tex_04: {r: 200, g: 200, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1003861325557268325
 MonoBehaviour:
