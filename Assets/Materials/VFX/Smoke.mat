@@ -23,7 +23,7 @@ Material:
   m_Name: Smoke
   m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
   m_ValidKeywords:
-  - _COLORCOLOR_ON
+  - _ALPHAPREMULTIPLY_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _FLIPBOOKBLENDING_OFF
@@ -117,12 +117,12 @@ Material:
     - _AlphaClip: 0
     - _BleModDest: 0
     - _BleModSour: 1
-    - _Blend: 0
+    - _Blend: 1
     - _BlendOp: 0
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
-    - _ColorMode: 4
+    - _ColorMode: 0
     - _Compa: 4
     - _Cull: 2
     - _Culling: 0
@@ -242,7 +242,7 @@ Material:
     - _SoftParticlesEnabled: 0
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _Surface: 1
     - _TEXMCOLINT: 1
     - _TRANSMODE: 0
