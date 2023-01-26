@@ -12,15 +12,65 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_T04
       objectReference: {fileID: 0}
+    - target: {fileID: 1222177202047895191, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1496738749843022519, guid: 1c21e2677429cd54391df29c2726fb45,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2035867561272028628, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592538030695284063, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824024709857330665, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100242529510100562, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509468088522892744, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221555167329979106, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5876213464318208824, guid: 1c21e2677429cd54391df29c2726fb45,
         type: 3}
       propertyPath: m_PolyMesh.m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035025932385572547, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883858714830759007, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651503991213265826, guid: 1c21e2677429cd54391df29c2726fb45,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8697782622569975718, guid: 1c21e2677429cd54391df29c2726fb45,
         type: 3}

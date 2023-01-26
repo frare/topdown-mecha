@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1194126199840004410}
   - component: {fileID: 3996544697716944368}
   - component: {fileID: 2246366094902918056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rock.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6021259088503230398}
   - component: {fileID: 3643556119543371960}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

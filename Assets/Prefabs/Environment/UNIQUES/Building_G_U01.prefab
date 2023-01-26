@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9210534578416325877}
   - component: {fileID: 1496738749843022519}
   - component: {fileID: 5876213464318208824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_G_U01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1403,7 +1403,7 @@ GameObject:
   - component: {fileID: 2315664200668963223}
   - component: {fileID: 5330634550727315847}
   - component: {fileID: 3472826519413051417}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pebbles.001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1486,7 +1486,7 @@ GameObject:
   - component: {fileID: 1038835897430143347}
   - component: {fileID: 5903823793841612178}
   - component: {fileID: 3144061739357219728}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Debri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,7 +1569,7 @@ GameObject:
   - component: {fileID: 5768009757923191840}
   - component: {fileID: 3569075439644774247}
   - component: {fileID: 7824789063436403500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_T019 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,7 +1652,7 @@ GameObject:
   - component: {fileID: 5631407941929340341}
   - component: {fileID: 4867318942426772087}
   - component: {fileID: 4864750832689205883}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pebbles.001 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 2456730717847990963}
   - component: {fileID: 5393227493581936866}
   - component: {fileID: 5860508670805679654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pebbles.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1818,7 +1818,7 @@ GameObject:
   - component: {fileID: 4966313390479657003}
   - component: {fileID: 3982045256829408512}
   - component: {fileID: 3437722573922809018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_T017 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1901,7 +1901,7 @@ GameObject:
   - component: {fileID: 7638921344014734470}
   - component: {fileID: 1149411752492003861}
   - component: {fileID: 6538603889443973037}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_T019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1983,7 +1983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3746771659436771627}
   - component: {fileID: 3624219815610688178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2029,7 +2029,7 @@ GameObject:
   - component: {fileID: 3254111375623409571}
   - component: {fileID: 7022754328787379029}
   - component: {fileID: 8223482486145158775}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rock.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}

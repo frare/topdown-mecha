@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3660342652018295923}
   - component: {fileID: 1524698779739222201}
   - component: {fileID: 7303125117201394008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_T016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 2576177625829025909}
   - component: {fileID: 1472589613554345936}
   - component: {fileID: 3714140633838310170}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_B_U01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 968451769301699230}
   - component: {fileID: 3068172393114730068}
   - component: {fileID: 7512922235944806482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Debri (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 341183048626783503}
   - component: {fileID: 2547022419056931269}
   - component: {fileID: 5992584158399850532}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_T016 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1838,7 +1838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8806527406245088044}
   - component: {fileID: 1473244038328509336}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

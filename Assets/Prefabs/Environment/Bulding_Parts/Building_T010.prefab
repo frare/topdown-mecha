@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3397778482516234837}
   - component: {fileID: 631527382599624351}
   - component: {fileID: 1453667373335062028}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_T010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4077283692774554859}
   - component: {fileID: 1822078570495158274}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

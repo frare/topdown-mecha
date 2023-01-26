@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863211901693264400}
   - component: {fileID: 7769659015035722892}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coliders (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 6403938488282606650}
   - component: {fileID: 9168109937385642224}
   - component: {fileID: 7564427553021913072}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Building_T01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PolyMesh:
-    name: PolybrushMesh34544
+    name: PolybrushMesh54142
     vertices:
     - {x: 0.14038542, y: 1.807026, z: 12.379433}
     - {x: -12.205536, y: 4.4087877, z: 9.411871}
@@ -1292,7 +1292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2579195793014564044}
   - component: {fileID: 4862245727228985313}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}

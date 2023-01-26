@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8673031827425702226}
   - component: {fileID: 6897327937352975768}
   - component: {fileID: -7102406092758346850}
-  m_Layer: 0
+  - component: {fileID: -8606812677764334258}
+  m_Layer: 10
   m_Name: Debri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,3 +744,19 @@ MonoBehaviour:
   m_OriginalMeshObject: {fileID: -1960369521137597082, guid: 66af54467191e8b4db80e792a1ade24d,
     type: 3}
   m_Mode: 0
+--- !u!208 &-8606812677764334258
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951926898384102477}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
