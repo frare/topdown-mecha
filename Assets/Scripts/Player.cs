@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     [SerializeField] private FlashBehaviour flash;
     [SerializeField] private List<ParticleSystem> thrusterParticles;
     [SerializeField] private float thrusterMinimumSize;
+    [SerializeField] private Vector3 thrusterRotationOffset;
     [SerializeField] private ParticleSystem muzzleParticles;
 
     private ObjectPool bulletPool;
@@ -64,9 +65,14 @@ public class Player : MonoBehaviour
         if (GameController.isPaused) return;
 
         rb.AddForce(moveInput * moveSpeed * 100 * Time.deltaTime);
+
         float thrusterSize = Mathf.Lerp(thrusterMinimumSize, 1f, rb.velocity.magnitude / 15);
-        foreach (ParticleSystem thruster in thrusterParticles) 
+        foreach (ParticleSystem thruster in thrusterParticles)
+        {
+            thruster.transform.forward = -rb.velocity;
+            thruster.transform.localEulerAngles += thrusterRotationOffset;
             thruster.transform.localScale = new Vector3(1f, 1f, thrusterSize);
+        }
 
         if (currentRangedCooldown > 0) currentRangedCooldown -= Time.deltaTime;
         if (currentMeleeCooldown > 0) currentMeleeCooldown -= Time.deltaTime;
