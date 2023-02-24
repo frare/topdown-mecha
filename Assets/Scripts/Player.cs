@@ -217,6 +217,8 @@ public class Player : MonoBehaviour
 
         currentHealth -= damage;
         UIController.UpdatePlayerHealth(currentHealth);
+        CameraController.StrongShake();
+
         if (currentHealth <= 0) { GameController.GameOver(); }
         else { StartCoroutine(TakeDamageCoroutine()); }
     }

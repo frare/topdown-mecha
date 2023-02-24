@@ -13,6 +13,8 @@ public class Explosion : MonoBehaviour
     private void OnEnable()
     {
         particles.Play();
+        
+        CameraController.LightShake();
     }
 
     private void Update()

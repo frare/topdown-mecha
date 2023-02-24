@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private Vector3 offset;
     [SerializeField] private float zoomDistance;
+    [Header("References")]
+    [SerializeField] private ScreenShake screenShake;
 
 
 
@@ -42,5 +44,15 @@ public class CameraController : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public static void LightShake()
+    {
+        instance.screenShake.Shake(.25f, .25f);
+    }
+
+    public static void StrongShake()
+    {
+        instance.screenShake.Shake(1f, .5f);
     }
 }
